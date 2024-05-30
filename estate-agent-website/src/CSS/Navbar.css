@@ -1,0 +1,38 @@
+.navbar {
+    font-family: Helvetica, sans-serif;
+    background-color: grey;
+    color: white;
+}
+
+.flex {
+    display: flex;
+}
+
+.list {
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+    flex: 1;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.list-item {
+    justify-content: center;
+}
+
+.nav-title {
+    margin-left: 20px;
+}
+
+.repo-link {
+    align-self: center;
+    margin-right: 20px;
+}
