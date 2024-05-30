@@ -1,23 +1,47 @@
+* {
+    outline: 1px solid red;
+} 
+
+.register-buyer {
+    max-width: 50vw;
+}
+
 .App-header {
     background-color: #282c34;
-    min-height: 100vh;
+    min-height: 10vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
   }
   
-.flex-container {
+.flex {
     padding: 0;
     margin: 0;
     list-style: none;
     border: 1px solid silver;
     display: flex;
+    justify-content: center;
 }
 
-.nowrap {
+
+
+.details {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    max-width: 50vw;
+}
+
+.name-input {
+    margin: 10px;
+}
+
+input {
+    max-width: 20vw;
+}
+
+/* .nowrap {
     flex-wrap: nowrap;
 }
 
@@ -27,38 +51,37 @@
 
 .wrap li {
     background: gold;
-}
+} */
 
-.wrap-reverse {
+/* .wrap-reverse {
     flex-wrap: wrap-reverse;
-}
+} */
 
-.wrap-reverse li {
+/* .wrap-reverse li {
     background: deepskyblue;
-}
+} */
 
-.direction.justify li {
+/* .direction.justify li {
     background: limegreen;
-}
+} */
 
-.flex-item {
+/* .flex-item {
     background: tomato;
     padding: 5px;
     width: 100px;
     height: 100px;
     margin: 10px;
-
     line-height: 100px;
     color: white;
     font-weight: bold;
     font-size: 2em;
     text-align: center;
-}
+} */
 
-.direction {
+/* .direction {
     flex-direction: row;
 }
 
 .justify {
     justify-content: center;
-}
+} */
