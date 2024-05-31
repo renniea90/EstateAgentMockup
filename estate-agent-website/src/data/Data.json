@@ -1,30 +1,6 @@
 {
   "Buyers": [
     {
-      "ID": 1,
-      "FirstName": "Rishi",
-      "SurName": "Sunak",
-      "id": "b9cb"
-    },
-    {
-      "ID": 2,
-      "FirstName": "Kier",
-      "SurName": "Starmer",
-      "id": "2bdb"
-    },
-    {
-      "ID": 3,
-      "FirstName": "John",
-      "SurName": "Swinney",
-      "id": "b977"
-    },
-    {
-      "ID": 4,
-      "FirstName": "Vaughan",
-      "SurName": "Gething",
-      "id": "3922"
-    },
-    {
       "id": "ba7e",
       "FirstName": "Test Surname 1",
       "SurName": "Test Buyer 1"
@@ -120,72 +96,69 @@
       "SurName": "Surfriday"
     }
   ],
-  "Sellers": [
-    {
-      "ID": 1,
-      "FirstName": "Praveen",
-      "SurName": "Karnam",
-      "id": "fc1f"
-    },
-    {
-      "ID": 2,
-      "FirstName": "Andrew",
-      "SurName": "Rennie",
-      "id": "ba7a"
-    },
-    {
-      "ID": 3,
-      "FirstName": "Lorna",
-      "SurName": "Smith",
-      "id": "0f3b"
-    },
-    {
-      "ID": 4,
-      "FirstName": "Suzy",
-      "SurName": "Brown",
-      "id": "e178"
-    }
-  ],
-  "Properties": [
-    {
-      "ID": 1,
-      "Address": "Buckhingham Palace",
-      "Price": "1M",
-      "Bedrooms": 4,
-      "Bathrooms": 2,
-      "Garden": "Yes",
-      "Sale-Status": "FORSALE",
-      "id": "ac7c"
-    },
-    {
-      "ID": 2,
-      "Address": "10 Downing Street",
-      "Price": "500K",
-      "Bedrooms": 10,
-      "Bathrooms": 20,
-      "Garden": "Yes",
-      "Sale-Status": "FORSALE",
-      "id": "423e"
-    },
-    {
-      "ID": 1,
-      "Address": "25 Gresham Street, London",
-      "Price": "5M",
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": "No",
-      "Sale-Status": "WITHDRAWN",
-      "id": "6df3"
-    },
-    {
-      "ID": 1,
-      "Address": "Edinburgh Castle",
-      "Price": "2M",
-      "Bedrooms": 4,
-      "Bathrooms": 2,
-      "Garden": "Yes",
-      "Sale-Status": "SOLD",
-      "id": "67a6"
-    }
-  ]
+    "Sellers": [
+        {
+            "ID":1,
+            "FirstName":"Praveen",
+            "SurName":"Karnam"
+        },
+        {
+            "ID":2,
+            "FirstName":"Andrew",
+            "SurName":"Rennie"
+        },
+        {
+            "ID":3,
+            "FirstName":"Lorna",
+            "SurName":"Smith"
+        },
+        {
+            "ID":4,
+            "FirstName":"Suzy",
+            "SurName":"Brown"
+        }
+    ],
+    "Properties": [
+        {
+            "ID":1,
+            "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
+            "Address":"Buckhingham Palace",
+            "Price":"1M",
+            "Bedrooms":4,
+            "Bathrooms":2,
+            "Garden":"Yes",
+            "SaleStatus":"FORSALE"
+        },
+        {
+            "ID":2,
+            "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
+            "Address":"10 Downing Street",
+            "Price":"500K",
+            "Bedrooms":10,
+            "Bathrooms":20,
+            "Garden":"Yes",
+            "SaleStatus":"FORSALE"
+        },
+        {
+            "ID":3,
+            "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
+            "Address":"25 Gresham Street, London",
+            "Price":"5M",
+            "Bedrooms":1,
+            "Bathrooms":1,
+            "Garden":"No",
+            "SaleStatus":"WITHDRAWN"
+        },
+        {
+            "ID":4,
+            "ImageUrl": "https://wallup.net/wp-content/uploads/2019/09/978033-mansion-house-architecture-luxury-building-design.jpg",
+            "Address":"Edinburgh Castle",
+            "Price":"2M",
+            "Bedrooms":4,
+            "Bathrooms":2,
+            "Garden":"Yes",
+            "SaleStatus":"SOLD"
+        }
+    ]
+
 }
