@@ -21,23 +21,7 @@ function App() {
             <Route path='/sellers' element={<SellersPage />} />
           </Routes>
         </BrowserRouter>
-      <main>
-          <AllBuyers />
-          <AllSellers />
-            <div className="customer-grid">
-              {Data.map((item) => (
-                <AllBuyers
-                ID={item.ID}
-                FirstName={item.FirstName}
-                SurName={item.SurName}
-                />,
-                <AllSellers
-                ID={item.ID}
-                FirstName={item.FirstName}
-                SurName={item.SurName}
-                />
-              ))}
-            </div>
+      <main>       
       </main>
     </div>
   );

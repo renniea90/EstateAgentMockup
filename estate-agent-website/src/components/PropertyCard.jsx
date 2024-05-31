@@ -1,7 +1,7 @@
 import { FaBed, FaBath, FaPoundSign  } from "react-icons/fa";
 import castle from '../images/castle.jpeg'
 
-import '../css/PropertyDisplay.css'
+import '../CSS/PropertyDisplay.css'
 
 export default function PropertyCard ( { id, ImageUrl, address, price,bedrooms , bathrooms, garden, salestatus}) {
 

@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import PropertyCard from './PropertyCard';
-import '../css/PropertyDisplay.css';
+import '../CSS/PropertyDisplay.css';
 
 
 export default function DisplayProperty() {
@@ -13,9 +13,7 @@ export default function DisplayProperty() {
         .then((response) => response.json())
         .then((data) => setData(data))
             console.log({apiData})
-    }, 
-  []
-  );
+    }, []);
  
     return(
        < main>
