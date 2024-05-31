@@ -20,6 +20,7 @@ const RegisterBuyer = () => {
 function DoRegister(e) {
     e.preventDefault();
     document.getElementById("BuyerError").innerHTML=""
+    document.getElementById("BuyerSuccess").innerHTML=""
     // Search in the JSON file for the First name and Second name entered in the form (now in the state)
     const FilteredBuyer = BuyerData.filter((Buyer)=> Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
 //    const FilteredBuyer = BuyerData.find((Buyer) => Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
@@ -41,7 +42,7 @@ else {
     console.log(BuyerData.id)
 //    setTimeout(() => {
         const FilteredBuyer = BuyerData.filter((Buyer)=> Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
-        document.getElementById("BuyerError").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.target.id))
+        document.getElementById("BuyerSuccess").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.target.id))
   //  }, 5000);
     //document.getElementById("BuyerError").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.id))
     setFirstName('')
@@ -58,14 +59,24 @@ else {
                     <div className="flex details">
                         <div class="name-input left">
                             <p>First Name:</p>
-                            <input type="text" value={FirstName} name="FirstName" onChange={(e) => setFirstName(e.target.value)} />
+                            <input type="text" value={FirstName} name="FirstName" onChange={(e) => {
+                                setFirstName(e.target.value);
+                                document.getElementById("BuyerError").innerHTML="";
+                                document.getElementById("BuyerSuccess").innerHTML=""
+                                }} />
                         </div>
                         <div class="name-input right">
                             <p>Surname:</p>
-                            <input type="text" name="SurName" value={SurName} onChange={(e) => setSurName(e.target.value)} />
+                            <input type="text" name="SurName" value={SurName} onChange={(e) => {
+                                setSurName(e.target.value)
+                                document.getElementById("BuyerError").innerHTML="";
+                                document.getElementById("BuyerSuccess").innerHTML=""
+                                }} />
                         </div>
                     </div>
-                    <div id="BuyerError"></div>
+                    <span style={{color: "red"}}  id="BuyerError"></span>
+                    <span style={{color: "blue"}} id="BuyerSuccess"></span>
+                    <br/>
                     <button class="submit-button">Add Buyer</button>
                 </div>
             </form>
