@@ -1,5 +1,6 @@
 import DisplayProperty from './components/DisplayProperty';
 import './App.css';
+import RegisterBuyer from './components/RegisterBuyer';
 import Navbar from './components/Navbar';
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import HomePage from './pages/Home';
@@ -17,8 +18,6 @@ function App() {
           <Route path='/sellers' element={<SellersPage />} />
         </Routes>
       </BrowserRouter>
-      
-
     </div>
   );
 }
