@@ -1,11 +1,10 @@
+import DisplayProperty from './components/DisplayProperty';
 import './App.css';
 import Navbar from './components/Navbar';
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
-
 import HomePage from './pages/Home';
 import BuyersPage from './pages/Buyers';
 import SellersPage from './pages/Sellers';
-
 
 function App() {
   return (
@@ -19,6 +18,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       
+
     </div>
   );
 }

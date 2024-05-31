@@ -14,7 +14,7 @@
             "ID":3,
             "First-Name":"John",
             "SurName":"Swinney"
-        }
+        },
         {
             "ID":4,
             "First-Name":"Vaughan",
@@ -36,7 +36,7 @@
             "ID":3,
             "First-Name":"Lorna",
             "SurName":"Smith"
-        }
+        },
         {
             "ID":4,
             "First-Name":"Suzy",
@@ -46,39 +46,43 @@
     "Properties": [
         {
             "ID":1,
+            "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
             "Address":"Buckhingham Palace",
             "Price":"1M",
             "Bedrooms":4,
             "Bathrooms":2,
             "Garden":"Yes",
-            "Sale-Status":"FORSALE"
+            "SaleStatus":"FORSALE"
         },
         {
             "ID":2,
+            "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
             "Address":"10 Downing Street",
             "Price":"500K",
             "Bedrooms":10,
             "Bathrooms":20,
             "Garden":"Yes",
-            "Sale-Status":"FORSALE"
+            "SaleStatus":"FORSALE"
         },
         {
-            "ID":1,
+            "ID":3,
+            "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
             "Address":"25 Gresham Street, London",
             "Price":"5M",
             "Bedrooms":1,
             "Bathrooms":1,
             "Garden":"No",
-            "Sale-Status":"WITHDRAWN"
-        }
+            "SaleStatus":"WITHDRAWN"
+        },
         {
-            "ID":1,
+            "ID":4,
+            "ImageUrl": "https://wallup.net/wp-content/uploads/2019/09/978033-mansion-house-architecture-luxury-building-design.jpg",
             "Address":"Edinburgh Castle",
             "Price":"2M",
             "Bedrooms":4,
             "Bathrooms":2,
             "Garden":"Yes",
-            "Sale-Status":"SOLD"
+            "SaleStatus":"SOLD"
         }
     ]
 }
