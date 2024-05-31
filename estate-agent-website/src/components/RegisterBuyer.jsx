@@ -22,6 +22,8 @@ function DoRegister(e) {
     document.getElementById("BuyerError").innerHTML=""
     // Search in the JSON file for the First name and Second name entered in the form (now in the state)
     const FilteredBuyer = BuyerData.filter((Buyer)=> Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
+//    const FilteredBuyer = BuyerData.find((Buyer) => Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
+console.log(FilteredBuyer)
     //Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & 
 // Check if the length of Filtered result is > 0. If so, the buyer already exists. Give appropriate error and dont add the user.
 if(FilteredBuyer.length >0) {
@@ -38,10 +40,10 @@ else {
         }
     )
     console.log(BuyerData.id)
-    setTimeout(() => {
+//    setTimeout(() => {
         const FilteredBuyer = BuyerData.filter((Buyer)=> Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
         document.getElementById("BuyerError").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.target.id))
-    }, 5000);
+  //  }, 5000);
     //document.getElementById("BuyerError").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.id))
     setFirstName('')
     setSurName('')
