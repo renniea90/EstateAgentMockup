@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 // import WriteToJSON from "./WriteToJSON";
-import '../Register.css';
+import '../CSS/Register.css';
 
 const RegisterBuyer = () => {
 
