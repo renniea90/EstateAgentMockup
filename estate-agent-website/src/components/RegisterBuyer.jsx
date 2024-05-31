@@ -37,10 +37,16 @@ else {
             body: JSON.stringify(newBuyer)
         }
     )
-    const FilteredBuyer = BuyerData.filter((Buyer)=> Buyer.FirstName===FirstName & Buyer.SurName===SurName)
-    document.getElementById("BuyerError").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.id))
+    console.log(BuyerData.id)
+    setTimeout(() => {
+        const FilteredBuyer = BuyerData.filter((Buyer)=> Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
+        document.getElementById("BuyerError").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.target.id))
+    }, 5000);
+    //document.getElementById("BuyerError").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.id))
     setFirstName('')
     setSurName('')
+    console.log(FilteredBuyer.id)
+
 }
 
 }
