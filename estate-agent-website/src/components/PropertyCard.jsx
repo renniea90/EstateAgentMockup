@@ -1,5 +1,6 @@
 import { FaBed, FaBath, FaPoundSign  } from "react-icons/fa";
 import castle from '../images/castle.jpeg'
+import { PiPottedPlantFill } from "react-icons/pi";
 
 import '../CSS/PropertyDisplay.css'
 
@@ -22,8 +23,8 @@ export default function PropertyCard ( { id, ImageUrl, address, price,bedrooms ,
                   <p className="p-two" ><span>< FaPoundSign /> </span>{price}</p>
                   <p ClassName="p-three"><span>	<FaBed /> </span> {bedrooms} </p>
                   <p ClassName="p-four"><span> 	<FaBath /> </span> {bathrooms}</p>
-                  {/* <p ClassName="p-five"><span> Garden </span> {garden}</p>
-                  <p ClassName="p-six"><span> </span> {salestatus}</p> */}
+                 <p ClassName="p-five"> <span><PiPottedPlantFill /></span> {garden} </p>
+      
   
             
           </div>
