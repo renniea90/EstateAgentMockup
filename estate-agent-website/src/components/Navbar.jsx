@@ -1,14 +1,15 @@
-import '../CSS/Navbar.css'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import '../App.css'
+
 
 export default function Navbar() {
 
     const repo = <FontAwesomeIcon icon={faGithub} />
     return (
         <div class="navbar flex space-between">
-            <h1 class="nav-title">PALS Estate Agents</h1>
+            {/* <h1 class="nav-title">PALS Estate Agents</h1> */}
             <ul class="flex list space-around">
                 <li class="list-item">
                     <Link to='/' class="link">HOME</Link>
@@ -22,7 +23,7 @@ export default function Navbar() {
             </ul>
             <p class="repo-link">
                 <Link to='https://github.com/SuzyQ-2117/EstateAgentMockup' target="_blank" class="link">{repo}</Link>
-                </p>
+            </p>
         </div>
     )
 }

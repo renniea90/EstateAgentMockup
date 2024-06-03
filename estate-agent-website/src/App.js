@@ -14,15 +14,20 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/buyers' element={<BuyersPage />} />
-            <Route path='/sellers' element={<SellersPage />} />
-          </Routes>
-        </BrowserRouter>
-      <main>       
-      </main>
+        <div className="white-container">
+          <div className="top-container">
+            <h1 className="logo">LOGO</h1>
+            <h2 className="slogan">A cheesy slogan goes here</h2>
+            <Navbar />
+          </div>
+        </div>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/buyers' element={<BuyersPage />} />
+          <Route path='/sellers' element={<SellersPage />} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
