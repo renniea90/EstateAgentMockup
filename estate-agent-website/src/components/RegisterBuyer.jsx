@@ -38,7 +38,7 @@ else {
             headers: { "Content-Type" : "application/json"},
             body: JSON.stringify(newBuyer)
         }
-    )
+    ) 
 //    setTimeout(() => {
         const FilteredBuyer = BuyerData.filter((Buyer)=> Buyer.FirstName.toLowerCase()===FirstName.toLowerCase() & Buyer.SurName.toLowerCase()===SurName.toLowerCase())
         document.getElementById("BuyerSuccess").innerHTML="Buyer added successfully. ID is "  + FilteredBuyer.map((Buyer=>Buyer.target.id))
