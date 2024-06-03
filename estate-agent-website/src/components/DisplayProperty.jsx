@@ -8,12 +8,14 @@ export default function DisplayProperty() {
 
     const [apiData, setData] = useState([]);
 
-    useEffect(() => {
-     fetch('http://localhost:8000/Properties')
-        .then((response) => response.json())
-        .then((data) => setData(data))
-            console.log({apiData})
-    }, []);
+    const fetchData = () => {fetch('http://localhost:8000/Properties')
+    .then((response) => response.json())
+    .then((data) => setData(data))
+        console.log({apiData})
+    
+      }
+    useEffect(() => {fetchData() }
+     , []);
  
     return(
        < main>
@@ -30,6 +32,7 @@ export default function DisplayProperty() {
              bathrooms={item.Bathrooms}
              garden={item.Garden}
              salestatus={item.SaleStatus}
+             fetchData={fetchData}
            />
          ))
          }

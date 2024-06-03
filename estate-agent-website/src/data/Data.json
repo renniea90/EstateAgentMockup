@@ -129,7 +129,6 @@
   ],
   "Properties": [
     {
-      "ID": 1,
       "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
       "Address": "Buckhingham Palace",
       "Price": "1M",
@@ -140,7 +139,6 @@
       "id": "63a8"
     },
     {
-      "ID": 2,
       "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
       "Address": "10 Downing Street",
       "Price": "500K",
@@ -151,7 +149,6 @@
       "id": "4c9d"
     },
     {
-      "ID": 3,
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
       "Address": "25 Gresham Street, London",
       "Price": "5M",
@@ -162,14 +159,13 @@
       "id": "72f8"
     },
     {
-      "ID": 4,
       "ImageUrl": "https://wallup.net/wp-content/uploads/2019/09/978033-mansion-house-architecture-luxury-building-design.jpg",
       "Address": "Edinburgh Castle",
       "Price": "2M",
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
-      "SaleStatus": "SOLD",
+      "SaleStatus": "FORSALE",
       "id": "648b"
     }
   ]
