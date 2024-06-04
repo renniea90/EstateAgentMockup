@@ -14,16 +14,17 @@ export default function DisplayProperty(props) {
   const { bathRoomsMin } = useContext(PropContext)
   const { bathRoomsMax } = useContext(PropContext)
   const { hasGarden } = useContext(PropContext)
-  
-    const [apiData, setData] = useState([]);
-    const fetchData = () => {fetch('http://localhost:8000/Properties')
+
+  let [apiData, setData] = useState([]);
+  const fetchData = () => {
+    fetch('http://localhost:8000/Properties')
     .then((response) => response.json())
     .then((data) => setData(data))
-      }
-    
-    useEffect(() => {fetchData() }
-     , []);
- 
+  }
+
+  useEffect(() => { fetchData() }
+    , []);
+
   // gotFilter will be true if user input is coming from the Find Property Component. If solid, filter the JSON and display only the result
   if (gotFilter) {
     // If there is a Min Price filter:
@@ -54,37 +55,34 @@ export default function DisplayProperty(props) {
     }
 
     // If there is a Garden filter:
-    if (hasGarden==="Yes") {
+    if (hasGarden === "Yes") {
       apiData = apiData.filter((Property) => Property.Garden === hasGarden)
     }
-    
+
   }
 
-
-  if(apiData.length === 0) {
+  if (apiData.length === 0) {
     return (
       <h1>There are no properties matching your search. Try changing the filters to see other properties.</h1>
-    )}
-    else {
-    }    
-  return (
-    < main>
-      <div className="property-card-container flex wrap">
-        {apiData.map((item) => (
-          <PropertyCard
-            id={item.id}
-            ImageUrl={item.ImageUrl}
-            address={item.Address}
-            price={item.Price}
-            bedrooms={item.Bedrooms}
-            bathrooms={item.Bathrooms}
-            garden={item.Garden}
-            salestatus={item.SaleStatus}
-            fetchData={fetchData}
-          />
-        ))
-        }
-      </div>
-    </main>
-  )
-};
+    )
+  } else {   
+    return (
+        <div className="property-card-container flex wrap">
+          {apiData.map((item) => (
+            <PropertyCard
+              id={item.id}
+              ImageUrl={item.ImageUrl}
+              address={item.Address}
+              price={item.Price}
+              bedrooms={item.Bedrooms}
+              bathrooms={item.Bathrooms}
+              garden={item.Garden}
+              salestatus={item.SaleStatus}
+              fetchData={fetchData}
+            />
+          ))
+          }
+        </div>
+    )
+  };
+}

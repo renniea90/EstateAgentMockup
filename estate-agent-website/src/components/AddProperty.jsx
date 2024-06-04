@@ -20,59 +20,56 @@ export default function AddProperty() {
     // tells the event if the event doesnt get handled dont use the default action as I want to do something else
     e.preventDefault();
 
-    
-// If seller exists then post to JSON
-if (Seller != ""){
-       
 
-                    const task = {
-                    ImageUrl,
-                    Address,
-                    Price,
-                    Bedrooms,
-                    Bathrooms,
-                    Garden,
-                    SaleStatus,
-                    };
+    // If seller exists then post to JSON
+    if (Seller != "") {
 
-                    //code to be added for if new then set to forsale
-                    setSaleStatus("FORSALE");
 
-                    // const apiURL = {http://localhost:8000/animals'}
-                    fetch(
-                    "http://localhost:8000/Properties",
+      const task = {
+        ImageUrl,
+        Address,
+        Price,
+        Bedrooms,
+        Bathrooms,
+        Garden,
+        SaleStatus,
+      };
 
-                    {
-                        method: "POST",
-                        // for most api json call
-                        headers: { "Content-Type": "application/json" },
-                        // changing into json data
-                        body: JSON.stringify(task),
-                    }
-                    );
-                  
+      //code to be added for if new then set to forsale
+      setSaleStatus("FORSALE");
 
-                    alert("New Property Added");
+      // const apiURL = {http://localhost:8000/animals'}
+      fetch(
+        "http://localhost:8000/Properties",
 
-              
+        {
+          method: "POST",
+          // for most api json call
+          headers: { "Content-Type": "application/json" },
+          // changing into json data
+          body: JSON.stringify(task),
+        }
+      );
 
-    // reset text boxes
+      alert("New Property Added");
 
-    setImageUrl("");
-    setAddress("");
-    setPrice(0);
-    setBedrooms(0);
-    setBathrooms(0);
-    setGarden("");
-    setSaleStatus("");
-    setSeller("");
+      // reset text boxes
 
-    //otherwise ask seller to register
-} else {
+      setImageUrl("");
+      setAddress("");
+      setPrice(0);
+      setBedrooms(0);
+      setBathrooms(0);
+      setGarden("");
+      setSaleStatus("");
+      setSeller("");
 
-    alert("Seller doesnt exist, please register in the seller page");
+      //otherwise ask seller to register
+    } else {
 
-} 
+      alert("Seller doesnt exist, please register in the seller page");
+
+    }
 
   };
 
@@ -87,13 +84,13 @@ if (Seller != ""){
       {/* <br /> <br /> <br /> */}
       <label>Existing Sellers : </label>
       <select name="Sellers"
-            onChange={(e) => setSeller(e.target.value)}
-            >
-           <option value=""></option>
+        onChange={(e) => setSeller(e.target.value)}
+      >
+        <option value=""></option>
         {Data.Sellers.map((item) => (
           <option value={item.ID}>{item.FirstName + " " + item.SurName}</option>
         ))}
-    </select>
+      </select>
       <br /> <br /> <br />
       <label for="fname"> Address :</label>
       <input
