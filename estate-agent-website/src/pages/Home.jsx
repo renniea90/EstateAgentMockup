@@ -16,6 +16,7 @@ const [filter, setFilter] = useState({})
           <div className="page-content">
             <div className="white-container">
               <div className="filter-container">
+                <AddProperty />
                 <FindProperty />
               </div>
              </div>
