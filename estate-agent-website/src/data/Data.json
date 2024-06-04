@@ -212,6 +212,56 @@
       "Bathrooms": "2",
       "Garden": "No",
       "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "6cee",
+      "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
+      "Address": "3333",
+      "Price": "33",
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "bbdc",
+      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
+      "Address": "22222",
+      "Price": "3333",
+      "Bedrooms": "2",
+      "Bathrooms": "2",
+      "Garden": "No",
+      "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "aa88",
+      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
+      "Address": "222",
+      "Price": "3",
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "90e9",
+      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
+      "Address": "lorna",
+      "Price": "1000000",
+      "Bedrooms": "9",
+      "Bathrooms": "9",
+      "Garden": "No",
+      "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "bfe7",
+      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
+      "Address": "jordan ",
+      "Price": "9999999999999",
+      "Bedrooms": "9999",
+      "Bathrooms": 0,
+      "Garden": "",
+      "SaleStatus": ""
     }
   ]
 }
