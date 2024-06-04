@@ -371,6 +371,10 @@
   display: none;
 }
 
+.INVIS {
+  visibility: hidden;
+}
+
 .property-data {
   font-size: 1.2vw;
   text-align: left;

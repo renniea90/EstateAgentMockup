@@ -30,15 +30,15 @@ const FindProperty = () => {
     }
 
     return (
-        <div class="filter-container">
+        <div className="filter-container">
             <form onSubmit={AddFilter}>
-                <div class="container">
+                <div className="container">
 
-                    <div class="price">
-                        <div class="price-heading">
+                    <div className="price">
+                        <div className="price-heading">
                             <p>PRICE</p>
                         </div>
-                        <div class="price-max">
+                        <div className="price-max">
                             <select name="PriceMax" id="PriceMax" onChange={(e) => {
                                 setPriceMax(e.target.value)
                                 const minPrice = document.getElementById("PriceMin")
@@ -142,7 +142,7 @@ const FindProperty = () => {
 
                             </select>
                         </div>
-                        <div class="price-min">
+                        <div className="price-min">
                             <select name="PriceMin" id="PriceMin" onChange={(e) => {
                                 setPriceMin(e.target.value)
                                 const maxPrice = document.getElementById("PriceMax")
@@ -247,19 +247,19 @@ const FindProperty = () => {
 
                             </select>
                         </div>
-                        <div class="price-to">
+                        <div className="price-to">
                             <p>to</p>
                         </div>
                     </div>
 
-                    <div class="bathrooms">
-                        <div class="bathrooms-heading">
+                    <div className="bathrooms">
+                        <div className="bathrooms-heading">
                             <p>BATHROOMS</p>
                         </div>
-                        <div class="bathrooms-to">
+                        <div className="bathrooms-to">
                             <p>to</p>
                         </div>
-                        <div class="bathrooms-min">
+                        <div className="bathrooms-min">
                             <select name="BathsMin" id="BathsMin" onChange={(e) => {
                                 setBathRoomsMin(e.target.value)
                                 const maxBaths = document.getElementById("BathsMax")
@@ -281,7 +281,7 @@ const FindProperty = () => {
                                 <option value="10">10+</option>
                             </select>
                         </div>
-                        <div class="bathrooms-max">
+                        <div className="bathrooms-max">
                             <select name="BathsMax" id="BathsMax" onChange={(e) => {
                                 setBathRoomsMax(e.target.value)
                                 const minBaths = document.getElementById("BathsMin")
@@ -317,14 +317,14 @@ const FindProperty = () => {
                         </select>
                     </div>
 
-                    <div class="bedrooms">
-                        <div class="bedrooms-heading">
+                    <div className="bedrooms">
+                        <div className="bedrooms-heading">
                             <p>BEDROOMS</p>
                         </div>
-                        <div class="bedrooms-to">
+                        <div className="bedrooms-to">
                             <p>to</p>
                         </div>
-                        <div class="bedrooms-min">
+                        <div className="bedrooms-min">
                             <select name="BedsMin" id="BedsMin" onChange={(e) => {
                                 setBedRoomsMin(e.target.value)
                                 const maxBeds = document.getElementById("BedsMax")
@@ -346,7 +346,7 @@ const FindProperty = () => {
                                 <option value="10">10+</option>
                             </select>
                         </div>
-                        <div class="bedrooms-max">
+                        <div className="bedrooms-max">
                             <select name="BedsMax" id="BedsMax" onChange={(e) => {
                                 setBedRoomsMax(e.target.value)
                                 const minBeds = document.getElementById("BedsMin")
@@ -369,21 +369,23 @@ const FindProperty = () => {
                             </select>
                         </div>
                     </div>
-                    <div class="garden">
-                        <div class="garden-heading">
+
+                    <div className="garden">
+                        <div className="garden-heading">
                             <p>GARDEN?</p>
                         </div>
-                        <div class="checkbox">
+                        <div className="checkbox">
                             <input type="checkbox" name="Garden" value={garden} onChange={(e) => {
                                 setGarden(e.target.checked)
                             }} />
                         </div>
                     </div>
-                    <div class="reset">
-                        <button onClick={ResetFilters}>Reset Filters</button>
+
+                    <div className="reset">
+                        <button className="reset-filter-btn" onClick={ResetFilters}>Reset Filters</button>
                     </div>
                     <div class="submit">
-                        <button class="submit-button">Search</button>
+                        <button className="submit-filter-btn">Search</button>
                     </div>
                 </div>
                 <span style={{ color: "red" }} id="ProSearchError"></span>
