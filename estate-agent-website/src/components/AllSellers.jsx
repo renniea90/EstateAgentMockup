@@ -1,20 +1,67 @@
 
-function AllSellers({ ID, FirstName, SurName}) { 
 
-    return ( 
+import { useEffect, useState } from "react";
 
-        <div className="all-sellers"> 
+function AllSellers() {
 
-            <p>{ID}</p> 
+    let [seller, setSeller] = useState([]);
+    useEffect(() => {
+      fetch("http://localhost:8000/Sellers")
+        .then((response) => response.json())
+        .then((data) => setSeller(data));
+    }, 
+    []
+    );
+    
 
-            <p>{FirstName}</p> 
+    return (<table>
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Surname
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {
+                seller.map(seller => (<tr key={seller.id}>
+                    <td>{seller.id}</td>
+                    <td>{seller.FirstName}</td>
+                    <td>{seller.SurName}</td>
+                </tr>))
+            }
+        </tbody>
+    </table>);
+}
 
-            <p>{SurName}</p> 
+export default AllSellers;
 
-        </div> 
 
-    ) 
 
-} 
 
-export default AllSellers
+
+// function AllSellers({ ID, FirstName, SurName}) { 
+
+//     return ( 
+
+//         <div className="all-sellers"> 
+
+//             <p>{ID}</p> 
+
+//             <p>{FirstName}</p> 
+
+//             <p>{SurName}</p> 
+
+//         </div> 
+
+//     ) 
+
+// } 
+
+// export default AllSellers
