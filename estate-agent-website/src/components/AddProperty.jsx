@@ -5,7 +5,6 @@ import Data from "../data/Data.json";
 
 export default function AddProperty() {
   // create state
-
   const [ImageUrl, setImageUrl] = useState("");
   const [Address, setAddress] = useState("");
   const [Price, setPrice] = useState(0);
@@ -15,16 +14,12 @@ export default function AddProperty() {
   const [SaleStatus, setSaleStatus] = useState("FORSALE");
   const [Seller, setSeller] = useState("")
 
-
   const handleSubmit = (e) => {
     // tells the event if the event doesnt get handled dont use the default action as I want to do something else
     e.preventDefault();
 
-
     // If seller exists then post to JSON
     if (Seller != "") {
-
-
       const task = {
         ImageUrl,
         Address,
@@ -39,10 +34,7 @@ export default function AddProperty() {
       setSaleStatus("FORSALE");
 
       // const apiURL = {http://localhost:8000/animals'}
-      fetch(
-        "http://localhost:8000/Properties",
-
-        {
+      fetch("http://localhost:8000/Properties", {
           method: "POST",
           // for most api json call
           headers: { "Content-Type": "application/json" },
@@ -54,7 +46,6 @@ export default function AddProperty() {
       alert("New Property Added");
 
       // reset text boxes
-
       setImageUrl("");
       setAddress("");
       setPrice(0);
@@ -63,14 +54,10 @@ export default function AddProperty() {
       setGarden("");
       setSaleStatus("");
       setSeller("");
-
       //otherwise ask seller to register
     } else {
-
       alert("Seller doesnt exist, please register in the seller page");
-
     }
-
   };
 
   return (
@@ -92,7 +79,7 @@ export default function AddProperty() {
         ))}
       </select>
       <br /> <br /> <br />
-      <label for="fname"> Address :</label>
+      <label htmlFor="fname"> Address :</label>
       <input
         id="fname"
         type="text"

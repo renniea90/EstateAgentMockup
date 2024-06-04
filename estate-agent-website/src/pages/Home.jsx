@@ -15,13 +15,13 @@ const [filter, setFilter] = useState({})
         <PropProvider>
           <div className="page-content">
             <div className="white-container">
-              <div className="filter-container">
-                <AddProperty />
-                <FindProperty />
-              </div>
+              <FindProperty />
              </div>
             <div className="white-container">
               <DisplayProperty filterResults="false" />
+            </div>
+            <div className="white-container">
+              <AddProperty />
             </div>
           </div>
         </PropProvider>

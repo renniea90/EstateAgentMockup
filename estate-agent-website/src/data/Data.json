@@ -150,7 +150,7 @@
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
-      "SaleStatus": "FORSALE",
+      "SaleStatus": "WITHDRAWN",
       "id": "63a8"
     },
     {
@@ -190,7 +190,7 @@
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
-      "SaleStatus": "FORSALE",
+      "SaleStatus": "WITHDRAWN",
       "id": "ms84"
     },
     {
