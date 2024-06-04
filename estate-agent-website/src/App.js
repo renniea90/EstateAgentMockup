@@ -16,8 +16,8 @@ function App() {
       <BrowserRouter>
         <div className="white-container">
           <div className="top-container">
-            <h1 className="logo">LOGO</h1>
-            <h2 className="slogan">A cheesy slogan goes here</h2>
+            <h1 className="logo">PALS & Co.</h1>
+            <h2 className="slogan">Helping you find your forever home</h2>
             <Navbar />
           </div>
         </div>

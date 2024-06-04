@@ -130,8 +130,8 @@
   "Properties": [
     {
       "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
-      "Address": "Buckhingham Palace",
-      "Price": "1M",
+      "Address": "Buckingham Palace",
+      "Price": "1,000,000",
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
@@ -141,7 +141,7 @@
     {
       "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
       "Address": "10 Downing Street",
-      "Price": "500K",
+      "Price": "500,000",
       "Bedrooms": 10,
       "Bathrooms": 20,
       "Garden": "Yes",
@@ -151,22 +151,42 @@
     {
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
       "Address": "25 Gresham Street, London",
-      "Price": "5M",
+      "Price": "5,000,000",
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "No",
-      "SaleStatus": "WITHDRAWN",
+      "SaleStatus": "FORSALE",
       "id": "72f8"
     },
     {
       "ImageUrl": "https://wallup.net/wp-content/uploads/2019/09/978033-mansion-house-architecture-luxury-building-design.jpg",
       "Address": "Edinburgh Castle",
-      "Price": "2M",
+      "Price": "2,000,000",
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
       "SaleStatus": "FORSALE",
       "id": "648b"
+    },
+    {
+      "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
+      "Address": "Our House",
+      "Price": "1,000,000",
+      "Bedrooms": 4,
+      "Bathrooms": 2,
+      "Garden": "Yes",
+      "SaleStatus": "FORSALE",
+      "id": "ms84"
+    },
+    {
+      "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
+      "Address": "In the middle of our street",
+      "Price": "75,000",
+      "Bedrooms": 2,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "SaleStatus": "SOLD",
+      "id": "h723"
     }
   ]
 }

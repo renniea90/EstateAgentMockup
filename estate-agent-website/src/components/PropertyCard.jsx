@@ -1,7 +1,4 @@
 import { FaBed, FaBath, FaPoundSign } from "react-icons/fa";
-import castle from '../images/castle.jpeg'
-import { useState } from "react";
-import fetchData from "./DisplayProperty";
 import '../CSS/PropertyDisplay.css'
 
 export default function PropertyCard({ id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
@@ -18,23 +15,16 @@ export default function PropertyCard({ id, ImageUrl, address, price, bedrooms, b
   return (
     // const isgarden = {garden} 
     <div className="item-card">
-      {/* <img src={castle} width={400} height={250}/> */}
-      {/* <img src={require(`${imageUrl}`)} width={400} height={250} />  */}
-      <img src={ImageUrl} width={400} height={250} />
+      <img src={ImageUrl} className="property-img"/>
       <button className="btn">{salestatus}</button>
-
       {/* <button className="btn">{garden} </button>  */}
-
-      <p className="p-one" ><span></span>{address}</p>
-      <p className="p-two" ><span><FaPoundSign /></span>{price}</p>
-      <p ClassName="p-three"><span><FaBed /></span> {bedrooms} </p>
-      <p ClassName="p-four"><span><FaBath /></span> {bathrooms}</p>
-      <button onClick={() => changeStatus("WITHDRAWN")}>Withdraw Property</button>
+      <p className="p-one property-data address" ><span></span>{address}</p>
+      <p className="p-two property-data price" >£{price}</p>
+      <p className="p-three property-data beds"><span><FaBed /></span> {bedrooms} </p>
+      <p className="p-four property-data baths"><span><FaBath /></span> {bathrooms}</p>
+      <button className={salestatus.withdrawn ? 'hidden' : 'visible'} onClick={() => changeStatus("WITHDRAWN")}>Withdraw Property</button>
       {/* only show the relevant button, so the IF statement would be appear - ternary op */}
       <button onClick={() => changeStatus("FORSALE")}>Resubmit Property</button>
-      {/* <p ClassName="p-five"><span> Garden </span> {garden}</p>
-      <p ClassName="p-six"><span> </span> {salestatus}</p> */}
-
     </div>
 
   )
