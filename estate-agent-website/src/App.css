@@ -134,6 +134,10 @@
   align-items: center;
 }
 
+.DONOTDISPLAY {
+  display: none;
+}
+
 .container select {
   font-size: 1.3vw;
   max-width: 20vw;
@@ -365,6 +369,10 @@
 
 .SOLD .withdraw-btn, .SOLD .resubmit-btn, .SOLD .appt-btn {
   display: none;
+}
+
+.INVIS {
+  visibility: hidden;
 }
 
 .property-data {
