@@ -12,7 +12,6 @@ function RefreshData(){
 
 export default function AddProperty({fetchData}) {
   // create state
-
   const [ImageUrl, setImageUrl] = useState("");
   const [Address, setAddress] = useState("");
   const [Price, setPrice] = useState(0);
@@ -22,16 +21,12 @@ export default function AddProperty({fetchData}) {
   const [SaleStatus, setSaleStatus] = useState("FORSALE");
   const [Seller, setSeller] = useState("")
 
-
   const handleSubmit = (e) => {
     // tells the event if the event doesnt get handled dont use the default action as I want to do something else
     e.preventDefault();
 
-
     // If seller exists then post to JSON
     if (Seller != "") {
-
-
       const task = {
         ImageUrl,
         Address,
@@ -45,10 +40,8 @@ export default function AddProperty({fetchData}) {
       //code to be added for if new then set to forsale
       setSaleStatus("FORSALE");
 
-
       fetch(
         "http://localhost:8000/Properties",
-
         {
           method: "POST",
           // for most api json call
@@ -73,17 +66,10 @@ export default function AddProperty({fetchData}) {
         }
       );
 
-
-     
-   
-
       //otherwise ask seller to register
     } else {
-
       alert("Seller doesnt exist, please register in the seller page");
-
     }
-
   };
 
   return (
@@ -105,7 +91,7 @@ export default function AddProperty({fetchData}) {
         ))}
       </select>
       <br /> <br /> <br />
-      <label for="fname"> Address :</label>
+      <label htmlFor="fname"> Address :</label>
       <input
         id="fname"
         type="text"

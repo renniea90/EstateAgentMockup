@@ -25,22 +25,20 @@ export default function HomePage() {
   }, []);
 
   // Load values from context
-
-  return (
-    <PropProvider>
-      <div className="page-content">
-        <div className="white-container">
-          <div className="filter-container">
-            <AddProperty fetchData={fetchData}/>
-
-            <FindProperty />
+  
+    return (
+        <PropProvider>
+          <div className="page-content">
+            <div className="white-container">
+              <FindProperty />
+             </div>
+            <div className="white-container">
+              <DisplayProperty apiData={apiData} fetchData={fetchData} filterResults="false" />
+            </div>
+            <div className="white-container">
+              <AddProperty fetchData={fetchData}/>
+            </div>
           </div>
-        </div>
-        <div className="white-container">
-
-          <DisplayProperty apiData={apiData} fetchData={fetchData} filterResults="false" />
-        </div>
-      </div>
-    </PropProvider>
+      </PropProvider>
   );
 }

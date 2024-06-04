@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import '../CSS/Register.css';
 import { PropContext } from "../context/prop-context";
 
-
 const FindProperty = () => {
     const { populateFilters } = useContext(PropContext)
 
@@ -403,7 +402,11 @@ const FindProperty = () => {
 
 
 
+                    <div className="garden">
+                        <div className="garden-heading">
+                            <p>GARDEN?</p>
                         </div>
+
                         <div class="name-input right">
                             <p>Garden:</p>
                             <input type="checkbox" name="Garden" id="chkHasGarden" value={garden} onChange={(e) => {
@@ -413,10 +416,17 @@ const FindProperty = () => {
                         {/* <br /> */}
                         <button class="submit-button">Search</button>
                         <button onClick={ResetFilters}>Reset Filters</button>
+
                     </div>
-                    <span style={{ color: "red" }} id="ProSearchError"></span>
-                    {/* <span style={{ color: "blue" }} id="BuyerSuccess"></span> */}
+
+                    <div className="reset">
+                        <button className="reset-filter-btn" onClick={ResetFilters}>Reset</button>
+                    </div>
+                    <div className="submit">
+                        <button className="submit-filter-btn">Search</button>
+                    </div>
                 </div>
+
                 {/* </body> */}
                 {/* <script>alert("Hello world");</script> */}
             </form>
