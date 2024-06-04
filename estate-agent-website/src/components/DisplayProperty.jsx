@@ -5,7 +5,7 @@ import { PropContext } from "../context/prop-context"
 
 
 export default function DisplayProperty(props) {
-
+  //context for search filter
   const { gotFilter } = useContext(PropContext)
   const { priceMin } = useContext(PropContext)
   const { priceMax } = useContext(PropContext)
@@ -14,27 +14,16 @@ export default function DisplayProperty(props) {
   const { bathRoomsMin } = useContext(PropContext)
   const { bathRoomsMax } = useContext(PropContext)
   const { hasGarden } = useContext(PropContext)
-
-  // // Deconstruct props here
-  // const filterResults = props.filterResults
-  // if (filterResults==="true") {
-  // const minPrice = props.minPrice
-  // const maxPrice = props.maxPrice
-  // const minBeds = props.minBeds
-  // const maxBeds = props.maxBeds
-  // const minBaths = props.minBaths
-  // const maxBaths = props.maxBaths
-  // const hasGarden = props.hasGarden
-  // }
-
-  let [apiData, setData] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:8000/Properties')
-      .then((response) => response.json())
-      .then((data) => setData(data))
-  }, []);
-
+  
+    const [apiData, setData] = useState([]);
+    const fetchData = () => {fetch('http://localhost:8000/Properties')
+    .then((response) => response.json())
+    .then((data) => setData(data))
+      }
+    
+    useEffect(() => {fetchData() }
+     , []);
+ 
   // gotFilter will be true if user input is coming from the Find Property Component. If solid, filter the JSON and display only the result
   if (gotFilter) {
     // If there is a Min Price filter:
@@ -80,7 +69,7 @@ export default function DisplayProperty(props) {
     }    
   return (
     < main>
-      <div className="items-grid">
+      <div className="property-card-container flex wrap">
         {apiData.map((item) => (
           <PropertyCard
             id={item.id}
@@ -91,12 +80,11 @@ export default function DisplayProperty(props) {
             bathrooms={item.Bathrooms}
             garden={item.Garden}
             salestatus={item.SaleStatus}
+            fetchData={fetchData}
           />
         ))
         }
       </div>
-      
     </main>
   )
-
 };

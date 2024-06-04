@@ -1,34 +1,29 @@
-import { FaBed, FaBath, FaPoundSign  } from "react-icons/fa";
-import castle from '../images/castle.jpeg'
+import { FaBed, FaBath } from "react-icons/fa";
 import { PiPottedPlantFill } from "react-icons/pi";
-
 import '../CSS/PropertyDisplay.css'
 
-export default function PropertyCard ( { id, ImageUrl, address, price,bedrooms , bathrooms, garden, salestatus}) {
+export default function PropertyCard({ id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
 
-    return (
-  
-    // const isgarden = {garden} 
-        <div className="item-card">
- 
-              {/* <img src={castle} width={400} height={250}/> */}
-              {/* <img src={require(`${imageUrl}`)} width={400} height={250} />  */}
-               <img src={ImageUrl} width={400} height={250} />  
-                  <button className="btn">{salestatus}</button> 
-               
-                {/* <button className="btn">{garden} </button>  */}
-               
-               
-                  <p className="p-one" ><span></span>{address}</p>
-                  <p className="p-two" ><span>< FaPoundSign /> </span>{price}</p>
-                  <p ClassName="p-three"><span>	<FaBed /> </span> {bedrooms} </p>
-                  <p ClassName="p-four"><span> 	<FaBath /> </span> {bathrooms}</p>
-                 <p ClassName="p-five"> <span><PiPottedPlantFill /></span> {garden} </p>
-      
-  
-            
-          </div>
-     
-    )
-  }
-  
+  const changeStatus = (SaleStatus) => {
+    fetch('http://localhost:8000/Properties/' + id, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ SaleStatus }),
+    })
+      .then(fetchData)
+
+  return ( 
+    <div className="item-card">
+      <img src={ImageUrl} className="property-img"/>
+      <button className="btn">{salestatus}</button>
+      <p className="p-one property-data address" ><span></span>{address}</p>
+      <p className="p-two property-data price" >£{price}</p>
+      <p className="p-three property-data beds"><span><FaBed /></span> {bedrooms} </p>
+      <p className="p-four property-data baths"><span><FaBath /></span> {bathrooms}</p>
+      <p className="p-five"> <span><PiPottedPlantFill /></span> {garden} </p>
+      <button className={salestatus.withdrawn ? 'hidden' : 'visible'} onClick={() => changeStatus("WITHDRAWN")}>Withdraw Property</button>
+      {/* only show the relevant button, so the IF statement would be appear - ternary op */}
+      <button onClick={() => changeStatus("FORSALE")}>Resubmit Property</button>
+    </div>
+  )
+}

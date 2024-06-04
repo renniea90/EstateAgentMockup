@@ -12,15 +12,17 @@ const [filter, setFilter] = useState({})
 // Load values from context
 
     return (
-        <div>
-            HOME PAGE
-            <PropProvider>
-            <FindProperty />
-            {/* <DisplayProperty filterResults={gotFilter} minPrice={priceMin} maxPrice={priceMax} minBeds={bedRoomsMin} maxBeds={bedRoomsMax} minBaths={bathRoomsMin} maxBaths={bathRoomsMax} hasGarden={garden} /> */}
-            <DisplayProperty filterResults="false" />
-            {/* <FindProperty setFilter={setFilter}/>
-            <DisplayProperty filter={filter}/> */}
-            </PropProvider>
-        </div>
+        <PropProvider>
+          <div className="page-content">
+            <div className="white-container">
+              <div className="filter-container">
+                <FindProperty />
+              </div>
+             </div>
+            <div className="white-container">
+              <DisplayProperty filterResults="false" />
+            </div>
+          </div>
+        </PropProvider>
         )
 }

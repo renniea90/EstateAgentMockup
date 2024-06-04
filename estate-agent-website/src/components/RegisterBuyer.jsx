@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 // import WriteToJSON from "./WriteToJSON";
-import '../CSS/Register.css';
+
 
 const RegisterBuyer = () => {
 
@@ -54,7 +54,7 @@ else {
             <form onSubmit={DoRegister}>
                 <div>
                     <h1 className="App-header">Register a new Buyer here</h1>
-                    <div className="flex details">
+                    <div className="flex-register  details">
                         <div class="name-input left">
                             <p>First Name:</p>
                             <input type="text" value={FirstName} name="FirstName" onChange={(e) => {

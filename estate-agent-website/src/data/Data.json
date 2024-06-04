@@ -129,10 +129,9 @@
   ],
   "Properties": [
     {
-      "ID": 1,
       "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
       "Address": "Buckhingham Palace",
-      "Price": "120000",
+      "Price": 120000,
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
@@ -140,10 +139,9 @@
       "id": "63a8"
     },
     {
-      "ID": 2,
       "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
       "Address": "10 Downing Street",
-      "Price": "500000000",
+      "Price": 500000000,
       "Bedrooms": 10,
       "Bathrooms": 20,
       "Garden": "Yes",
@@ -151,26 +149,44 @@
       "id": "4c9d"
     },
     {
-      "ID": 3,
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
       "Address": "25 Gresham Street, London",
-      "Price": "250000",
+      "Price": 250000,
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "No",
-      "SaleStatus": "WITHDRAWN",
+      "SaleStatus": "FORSALE",
       "id": "72f8"
     },
     {
-      "ID": 4,
       "ImageUrl": "https://wallup.net/wp-content/uploads/2019/09/978033-mansion-house-architecture-luxury-building-design.jpg",
       "Address": "Edinburgh Castle",
-      "Price": "20000000",
+      "Price": 20000000,
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
-      "SaleStatus": "SOLD",
+      "SaleStatus": "FORSALE",
       "id": "648b"
+    },
+    {
+      "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
+      "Address": "Our House",
+      "Price": 1000000,
+      "Bedrooms": 4,
+      "Bathrooms": 2,
+      "Garden": "Yes",
+      "SaleStatus": "FORSALE",
+      "id": "ms84"
+    },
+    {
+      "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
+      "Address": "In the middle of our street",
+      "Price": 75000,
+      "Bedrooms": 2,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "SaleStatus": "SOLD",
+      "id": "h723"
     }
   ]
 }
