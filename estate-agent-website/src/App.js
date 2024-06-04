@@ -10,6 +10,8 @@ import HomePage from './pages/Home';
 import BuyersPage from './pages/Buyers';
 import SellersPage from './pages/Sellers';
 
+import { PropContext } from './context/prop-context';
+
 function App() {
   return (
     <div className="App">
