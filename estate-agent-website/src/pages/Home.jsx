@@ -1,3 +1,5 @@
+import AddProperty from "../components/AddProperty"
+import '../CSS/Home.css'
 import { useState, useContext } from "react"
 import DisplayProperty from "../components/DisplayProperty"
 import FindProperty from "../components/FindProperty"
@@ -9,12 +11,10 @@ const [filter, setFilter] = useState({})
 
 // Load values from context
 
-
     return (
         <div>
             HOME PAGE
             <PropProvider>
-            
             <FindProperty />
             {/* <DisplayProperty filterResults={gotFilter} minPrice={priceMin} maxPrice={priceMax} minBeds={bedRoomsMin} maxBeds={bedRoomsMax} minBaths={bathRoomsMin} maxBaths={bathRoomsMax} hasGarden={garden} /> */}
             <DisplayProperty filterResults="false" />
@@ -22,5 +22,5 @@ const [filter, setFilter] = useState({})
             <DisplayProperty filter={filter}/> */}
             </PropProvider>
         </div>
-    )
+        )
 }
