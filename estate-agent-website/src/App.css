@@ -92,7 +92,7 @@
 }
 
 .link:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 
@@ -114,9 +114,10 @@
   margin: 0.1vw;
 }
 
-.left-filter,.right-filter {
+.left-filter,
+.right-filter {
   width: 40rem;
-  
+
 }
 
 .filter {
@@ -134,9 +135,10 @@
   max-width: 20vw;
 }
 
-.container {  display: grid;
+.container {
+  display: grid;
   grid-template-columns: 1.4fr 1.4fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto 0.6fr;
   grid-auto-columns: 1fr;
   gap: 1em 3em;
   grid-auto-flow: row;
@@ -149,7 +151,7 @@
   height: 70%;
 }
 
-.price {  
+.price {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -168,12 +170,12 @@
   grid-area: price-heading;
 }
 
-.price-max { 
+.price-max {
   grid-area: price-max;
 }
 
-.price-min { 
-  grid-area: price-min; 
+.price-min {
+  grid-area: price-min;
 }
 
 .price-to {
@@ -183,9 +185,7 @@
   grid-area: price-to;
 }
 
-/* The FindProperty component has two max bathrooms dropdowns and this is causing issues with the display of the layout. Without the second dropdown, the layout is as expected */
-
-.bathrooms {  
+.bathrooms {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -211,11 +211,16 @@
   grid-area: bathrooms-to;
 }
 
-.bathrooms-min { grid-area: bathrooms-min; }
+.bathrooms-min {
+  grid-area: bathrooms-min;
+}
 
-.bathrooms-max { grid-area: bathrooms-max; }
+.bathrooms-max {
+  grid-area: bathrooms-max;
+}
 
-.bedrooms {  display: grid;
+.bedrooms {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
@@ -240,11 +245,16 @@
   grid-area: bedrooms-to;
 }
 
-.bedrooms-min { grid-area: bedrooms-min; }
+.bedrooms-min {
+  grid-area: bedrooms-min;
+}
 
-.bedrooms-max { grid-area: bedrooms-max; }
+.bedrooms-max {
+  grid-area: bedrooms-max;
+}
 
-.garden {  display: grid;
+.garden {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-auto-rows: 1fr;
@@ -274,27 +284,31 @@
   grid-area: reset;
 }
 
-.reset-filter-btn, .submit-filter-btn {
-  background-color:#F7F7F8;
-  border-radius:5px;
-  border:1px solid #565264;
-  display:inline-block;
-  cursor:pointer;
-  color:#565264;
-  font-size:20px;
-  padding:16px 31px;
-  text-decoration:none;
+.reset-filter-btn,
+.submit-filter-btn {
+  background-color: #F7F7F8;
+  border-radius: 5px;
+  border: 1px solid #565264;
+  display: inline-block;
+  cursor: pointer;
+  color: #565264;
+  font-size: 20px;
+  padding: 16px 31px;
+  text-decoration: none;
 }
 
-.reset-filter-btn:hover, .submit-filter-btn:hover {
+.reset-filter-btn:hover,
+.submit-filter-btn:hover {
   color: #F7F7F8;
-  background-color:#A6808C;
+  background-color: #A6808C;
 }
-.reset-filter-btn:active, .submit-filter-btn:active {
-  position:relative;
-  top:1px;
+
+.reset-filter-btn:active,
+.submit-filter-btn:active {
+  position: relative;
+  top: 1px;
 }
-  
+
 
 .submit {
   justify-self: center;
@@ -324,13 +338,13 @@
 .padded-property-container {
   padding: 10px;
   height: 100%;
-  
+
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .salestatus {
@@ -358,7 +372,9 @@
   display: none;
 }
 
-.SOLD .withdraw-btn, .SOLD .resubmit-btn, .SOLD .appt-btn {
+.SOLD .withdraw-btn,
+.SOLD .resubmit-btn,
+.SOLD .appt-btn {
   display: none;
 }
 
@@ -381,44 +397,4 @@
   line-height: 1;
 }
 
-
-
-
-
-
-
-
-
-
-/* REGISTER BUYER  */
-.register-buyer {
-  max-width: 50vw;
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-.flex-register {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: 1px solid silver;
-  display: flex;
-  justify-content: center;
-}
-.details {
-  flex-wrap: wrap;
-  padding-bottom: 20px;
-  max-width: 50vw;
-}
-.name-input {
-  margin: 10px;
-}
-input {
-  max-width: 20vw;
-}
+/* REGISTER SELLER  */

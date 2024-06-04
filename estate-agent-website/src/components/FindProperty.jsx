@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
-import '../CSS/Register.css';
-import { PropContext } from "../context/prop-context";
 
+import { PropContext } from "../context/prop-context";
 
 const FindProperty = () => {
     const { populateFilters } = useContext(PropContext)

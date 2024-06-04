@@ -14,52 +14,28 @@ function AllBuyers() {
     []
     );
     
-
-    return (<table>
-        <thead>
-            <tr>
-                <th>
-                    ID
-                </th>
-                <th>
-                    First Name
-                </th>
-                <th>
-                    Surname
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {
-                buyer.map(buyer => (<tr key={buyer.id}>
-                    <td>{buyer.id}</td>
-                    <td>{buyer.FirstName}</td>
-                    <td>{buyer.SurName}</td>
-                </tr>))
-            }
-        </tbody>
-    </table>);
+    return (
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th className="th-border">First Name</th>
+                        <th>Surname</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {buyer.map(buyer => (
+                    <tr className="hover" key={buyer.id}>
+                        <td>{buyer.id}</td>
+                        <td className="td-border">{buyer.FirstName}</td>
+                        <td>{buyer.SurName}</td>
+                    </tr>))
+                    }
+                </tbody>
+            </table>
+        </div>
+    );
 }
 
 export default AllBuyers;
-
-// function AllSellers({ ID, FirstName, SurName}) { 
-
-//     return ( 
-
-//         <div className="all-sellers"> 
-           
-           
-//                 <p>{ID}</p> 
-
-//                 <p>{FirstName}</p> 
-
-//                 <p>{SurName}</p> 
-
-        
-//         </div> 
-//     ) 
-
-// } 
-
-// export default AllBuyers

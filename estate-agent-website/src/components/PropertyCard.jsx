@@ -1,6 +1,6 @@
 import { FaBed, FaBath } from "react-icons/fa";
 import { PiPottedPlantFill } from "react-icons/pi";
-import '../CSS/PropertyDisplay.css'
+
 
 export default function PropertyCard({ id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
 

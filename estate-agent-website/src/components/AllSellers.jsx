@@ -14,54 +14,28 @@ function AllSellers() {
     );
     
 
-    return (<table>
-        <thead>
-            <tr>
-                <th>
-                    ID
-                </th>
-                <th>
-                    First Name
-                </th>
-                <th>
-                    Surname
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {
-                seller.map(seller => (<tr key={seller.id}>
-                    <td>{seller.id}</td>
-                    <td>{seller.FirstName}</td>
-                    <td>{seller.SurName}</td>
-                </tr>))
-            }
-        </tbody>
-    </table>);
+    return (
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th className="th-border">First Name</th>
+                        <th>Surname</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {seller.map(seller => (
+                    <tr className="hover" key={seller.id}>
+                        <td>{seller.id}</td>
+                        <td className="td-border">{seller.FirstName}</td>
+                        <td>{seller.SurName}</td>
+                    </tr>))
+                    }
+                </tbody>
+            </table>
+        </div>
+    );
 }
 
 export default AllSellers;
-
-
-
-
-
-// function AllSellers({ ID, FirstName, SurName}) { 
-
-//     return ( 
-
-//         <div className="all-sellers"> 
-
-//             <p>{ID}</p> 
-
-//             <p>{FirstName}</p> 
-
-//             <p>{SurName}</p> 
-
-//         </div> 
-
-//     ) 
-
-// } 
-
-// export default AllSellers
