@@ -7,13 +7,14 @@ export default function BuyersPage() {
         <div>
             BUYERS PAGE
             <div className="customer-grid">
-              {Data.Buyers.map((item) => (
+              <AllBuyers />
+              {/* {Data.Buyers.map((item) => (
                 <AllBuyers
-                ID={item.ID}
+                ID={item.id}
                 FirstName={item.FirstName}
                 SurName={item.SurName}
                 />
-              ))}
+              ))} */}
             </div>
             <RegisterBuyer />
         </div>

@@ -4,7 +4,7 @@ import '../CSS/PropertyDisplay.css';
 import { PropContext } from "../context/prop-context"
 
 
-export default function DisplayProperty(props) {
+export default function DisplayProperty({apiData, fetchData}) {
   //context for search filter
   const { gotFilter } = useContext(PropContext)
   const { priceMin } = useContext(PropContext)
@@ -15,15 +15,8 @@ export default function DisplayProperty(props) {
   const { bathRoomsMax } = useContext(PropContext)
   const { hasGarden } = useContext(PropContext)
 
-  let [apiData, setData] = useState([]);
-  const fetchData = () => {
-    fetch('http://localhost:8000/Properties')
-    .then((response) => response.json())
-    .then((data) => setData(data))
-  }
 
-  useEffect(() => { fetchData() }
-    , []);
+
 
   // gotFilter will be true if user input is coming from the Find Property Component. If solid, filter the JSON and display only the result
   if (gotFilter) {

@@ -2,8 +2,15 @@ import { useState } from "react";
 import "../CSS/AddProperty.css";
 import { SiThenorthface } from "react-icons/si";
 import Data from "../data/Data.json";
+import DisplayProperty from "./DisplayProperty";
 
-export default function AddProperty() {
+function RefreshData(){
+
+
+}
+
+
+export default function AddProperty({fetchData}) {
   // create state
 
   const [ImageUrl, setImageUrl] = useState("");
@@ -38,7 +45,7 @@ export default function AddProperty() {
       //code to be added for if new then set to forsale
       setSaleStatus("FORSALE");
 
-      // const apiURL = {http://localhost:8000/animals'}
+
       fetch(
         "http://localhost:8000/Properties",
 
@@ -49,20 +56,26 @@ export default function AddProperty() {
           // changing into json data
           body: JSON.stringify(task),
         }
+      ).then(
+        ()=> {
+          alert("New Property Added");
+
+          // reset text boxes
+          setImageUrl("");
+          setAddress("");
+          setPrice(0);
+          setBedrooms(0);
+          setBathrooms(0);
+          setGarden("");
+          setSaleStatus("");
+          setSeller("");
+          fetchData()
+        }
       );
 
-      alert("New Property Added");
 
-      // reset text boxes
-
-      setImageUrl("");
-      setAddress("");
-      setPrice(0);
-      setBedrooms(0);
-      setBathrooms(0);
-      setGarden("");
-      setSaleStatus("");
-      setSeller("");
+     
+   
 
       //otherwise ask seller to register
     } else {
