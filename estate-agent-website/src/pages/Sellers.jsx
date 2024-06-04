@@ -1,5 +1,6 @@
 import Data from '../data/Data.json'
 import AllSellers from '../components/AllSellers'
+import RegisterSeller from '../components/RegisterSeller'
 
 export default function SellersPage() {
     return (
@@ -14,6 +15,7 @@ export default function SellersPage() {
                 />
               ))}
             </div>
+            <RegisterSeller/>
         </div>
     )
 }
