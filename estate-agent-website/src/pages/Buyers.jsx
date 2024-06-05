@@ -2,13 +2,27 @@ import Data from '../data/Data.json'
 import AllBuyers from '../components/AllBuyers'
 import RegisterBuyer from '../components/RegisterBuyer'
 import '../CSS/BuyersPage.css'
+import { useEffect, useState } from 'react'
 
 export default function BuyersPage() {
+
+  let [buyer, setBuyer] = useState([]);
+
+  function fetchBuyerData() {
+    fetch("http://localhost:8000/Buyers")
+    .then((response) => response.json())
+    .then((data) => setBuyer(data));
+  }
+
+  useEffect(() => {
+    fetchBuyerData()
+  }, []);
+
   return (
     <div className="buyers flex space-between">
       <div className="half-white-container-left">
         <div className="customer-grid">
-          <AllBuyers />
+          <AllBuyers buyer={buyer}/>
         </div>
       </div>
       <div>
@@ -19,7 +33,7 @@ export default function BuyersPage() {
           </div>
         </div>
         <div className="half-white-container-right">
-          <RegisterBuyer />
+          <RegisterBuyer fetchBuyerData={fetchBuyerData} buyer={buyer} />
         </div>
       </div>
     </div>

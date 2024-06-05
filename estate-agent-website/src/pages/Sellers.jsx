@@ -2,13 +2,27 @@ import Data from '../data/Data.json'
 import AllSellers from '../components/AllSellers'
 import RegisterSeller from '../components/RegisterSeller'
 import '../CSS/SellersPage.css'
+import { useEffect, useState } from 'react';
 
 export default function SellersPage() {
+
+  let  [seller, setSeller] = useState([]);
+
+  function fetchSellerData() {
+      fetch('http://localhost:8000/Sellers')
+          .then((response) => response.json())
+          .then((data) => setSeller(data));
+  }
+
+  useEffect(() => {
+    fetchSellerData()
+  }, []);
+
   return (
     <div className="sellers flex row-reverse space-between">
       <div className="half-white-container-left">
         <div className="customer-grid">
-          <AllSellers />
+          <AllSellers seller={seller} />
         </div>
       </div>
       <div>
@@ -20,7 +34,7 @@ export default function SellersPage() {
           </div>
         </div>
         <div className="half-white-container-right">
-          <RegisterSeller />
+          <RegisterSeller fetchSellerData={fetchSellerData} seller={seller} />
         </div>
       </div>
       

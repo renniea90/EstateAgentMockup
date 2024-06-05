@@ -2,17 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-function AllSellers() {
-
-    let [seller, setSeller] = useState([]);
-    useEffect(() => {
-      fetch("http://localhost:8000/Sellers")
-        .then((response) => response.json())
-        .then((data) => setSeller(data));
-    }, 
-    []
-    );
-    
+function AllSellers(props) {    
 
     return (
         <div>
@@ -25,11 +15,11 @@ function AllSellers() {
                     </tr>
                 </thead>
                 <tbody>
-                    {seller.map(seller => (
-                    <tr className="hover" key={seller.id}>
-                        <td>{seller.id}</td>
-                        <td className="td-border">{seller.FirstName}</td>
-                        <td>{seller.SurName}</td>
+                    {props.seller.map(s => (
+                    <tr className="hover" key={s.id}>
+                        <td>{s.id}</td>
+                        <td className="td-border">{s.FirstName}</td>
+                        <td>{s.SurName}</td>
                     </tr>))
                     }
                 </tbody>

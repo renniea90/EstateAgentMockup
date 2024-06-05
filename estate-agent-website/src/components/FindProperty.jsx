@@ -383,7 +383,7 @@ const FindProperty = () => {
                     <div className="reset">
                         <button className="reset-filter-btn" onClick={ResetFilters}>Reset Filters</button>
                     </div>
-                    <div class="submit">
+                    <div className="submit">
                         <button className="submit-filter-btn">Search</button>
                     </div>
                 </div>

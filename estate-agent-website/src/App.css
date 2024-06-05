@@ -330,6 +330,7 @@
   margin: 1vw auto;
   min-width: 250px;
   max-width: 20vw;
+  min-height: 350px;
   background-color: #F7F7F8;
   border: #D6CFCB dotted 1px;
   box-shadow: 1px 1px 10px 1px #d6cfcb;

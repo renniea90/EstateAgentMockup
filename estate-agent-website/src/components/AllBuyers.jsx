@@ -1,19 +1,7 @@
-
-
-
 import { useEffect, useState } from "react";
 
-function AllBuyers() {
+function AllBuyers(props) {
 
-    let [buyer, setBuyer] = useState([]);
-    useEffect(() => {
-      fetch("http://localhost:8000/Buyers")
-        .then((response) => response.json())
-        .then((data) => setBuyer(data));
-    }, 
-    []
-    );
-    
     return (
         <div>
             <table>
@@ -25,12 +13,12 @@ function AllBuyers() {
                     </tr>
                 </thead>
                 <tbody>
-                    {buyer.map(buyer => (
-                    <tr className="hover" key={buyer.id}>
-                        <td>{buyer.id}</td>
-                        <td className="td-border">{buyer.FirstName}</td>
-                        <td>{buyer.SurName}</td>
-                    </tr>))
+                    {props.buyer.map(b => (
+                        <tr className="hover" key={b.id}>
+                            <td>{b.id}</td>
+                            <td className="td-border">{b.FirstName}</td>
+                            <td>{b.SurName}</td>
+                        </tr>))
                     }
                 </tbody>
             </table>
