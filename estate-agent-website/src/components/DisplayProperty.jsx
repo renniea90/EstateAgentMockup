@@ -1,8 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import PropertyCard from './PropertyCard';
-import '../CSS/PropertyDisplay.css';
 import { PropContext } from "../context/prop-context"
-
 
 export default function DisplayProperty({apiData, fetchData}) {
   //context for search filter
@@ -15,9 +13,6 @@ export default function DisplayProperty({apiData, fetchData}) {
   const { bathRoomsMax } = useContext(PropContext)
   const { hasGarden } = useContext(PropContext)
 
-
-
-
   // gotFilter will be true if user input is coming from the Find Property Component. If solid, filter the JSON and display only the result
   if (gotFilter) {
     // If there is a Min Price filter:
@@ -28,7 +23,6 @@ export default function DisplayProperty({apiData, fetchData}) {
     if (priceMax) {
       apiData = apiData.filter((Property) => parseInt(Property.Price) <= parseInt(priceMax))
     }
-
     // If there is a Min Bedrooms filter:
     if (bedRoomsMin) {
       apiData = apiData.filter((Property) => parseInt(Property.Bedrooms) >= parseInt(bedRoomsMin))
@@ -37,7 +31,6 @@ export default function DisplayProperty({apiData, fetchData}) {
     if (bedRoomsMax) {
       apiData = apiData.filter((Property) => parseInt(Property.Bedrooms) <= parseInt(bedRoomsMax))
     }
-
     // If there is a Min Bathrooms filter:
     if (bathRoomsMin) {
       apiData = apiData.filter((Property) => parseInt(Property.Bedrooms) >= parseInt(bathRoomsMin))
@@ -46,12 +39,10 @@ export default function DisplayProperty({apiData, fetchData}) {
     if (bathRoomsMax) {
       apiData = apiData.filter((Property) => parseInt(Property.Bedrooms) <= parseInt(bathRoomsMax))
     }
-
     // If there is a Garden filter:
     if (hasGarden === "Yes") {
       apiData = apiData.filter((Property) => Property.Garden === hasGarden)
     }
-
   }
 
   if (apiData.length === 0) {

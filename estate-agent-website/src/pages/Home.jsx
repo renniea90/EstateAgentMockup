@@ -1,5 +1,5 @@
 import AddProperty from "../components/AddProperty";
-import "../CSS/Home.css";
+import "../CSS/HomePage.css";
 import { useState, useContext, useEffect } from "react";
 import DisplayProperty from "../components/DisplayProperty";
 import FindProperty from "../components/FindProperty";
