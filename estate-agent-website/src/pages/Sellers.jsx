@@ -1,6 +1,7 @@
 import Data from '../data/Data.json'
 import AllSellers from '../components/AllSellers'
 import RegisterSeller from '../components/RegisterSeller'
+import AddBookings from '../components/AddBooking'
 
 export default function SellersPage() {
     return (

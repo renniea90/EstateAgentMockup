@@ -30,7 +30,7 @@ export default function HomePage() {
         <PropProvider>
           <div className="page-content">
             <div className="white-container">
-              <FindProperty />
+              {/* <FindProperty /> */}
              </div>
             <div className="white-container">
               <DisplayProperty apiData={apiData} fetchData={fetchData} filterResults="false" />

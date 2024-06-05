@@ -4,10 +4,7 @@ import { SiThenorthface } from "react-icons/si";
 import Data from "../data/Data.json";
 import DisplayProperty from "./DisplayProperty";
 
-function RefreshData(){
 
-
-}
 
 
 export default function AddProperty({fetchData}) {

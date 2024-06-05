@@ -2,103 +2,23 @@
   "Buyers": [
     {
       "id": "ba7e",
-      "FirstName": "Test Surname 1",
-      "SurName": "Test Buyer 1"
+      "FirstName": "Andrew",
+      "SurName": "Rennie"
     },
     {
       "id": "cbf1",
-      "FirstName": "Hello",
-      "SurName": "World"
+      "FirstName": "Praveen",
+      "SurName": "Karnam"
     },
     {
       "id": "377a",
-      "FirstName": "Jordon",
-      "SurName": "B"
+      "FirstName": "Suzy",
+      "SurName": "Brown"
     },
     {
       "id": "e732",
-      "FirstName": "Test3",
-      "SurName": "Test 3"
-    },
-    {
-      "id": "ba87",
-      "FirstName": "test 4",
-      "SurName": "test 4"
-    },
-    {
-      "id": "c431",
-      "FirstName": "tet6",
-      "SurName": "test6"
-    },
-    {
-      "id": "7bca",
-      "FirstName": "test8",
-      "SurName": "test 8"
-    },
-    {
-      "id": "2b69",
-      "FirstName": "test10",
-      "SurName": "test10"
-    },
-    {
-      "id": "e84c",
-      "FirstName": "test11",
-      "SurName": "test11"
-    },
-    {
-      "id": "a9cc",
-      "FirstName": "test12",
-      "SurName": "test12"
-    },
-    {
-      "id": "0898",
-      "FirstName": "test13",
-      "SurName": "test13"
-    },
-    {
-      "id": "f970",
-      "FirstName": "test14",
-      "SurName": "test14"
-    },
-    {
-      "id": "f054",
-      "FirstName": "Fridaytest1",
-      "SurName": "Fri Day"
-    },
-    {
-      "id": "a2f9",
-      "FirstName": "Fridaytest1",
-      "SurName": "Fri Day"
-    },
-    {
-      "id": "9cf7",
-      "FirstName": "Friday2",
-      "SurName": "SurFriday"
-    },
-    {
-      "id": "446b",
-      "FirstName": "Friday2",
-      "SurName": "surfriday"
-    },
-    {
-      "id": "f57b",
-      "FirstName": "Friday2",
-      "SurName": "surfriday"
-    },
-    {
-      "id": "6bfc",
-      "FirstName": "Friday3",
-      "SurName": "Surfriday"
-    },
-    {
-      "id": "bc2f",
-      "FirstName": "Friday3",
-      "SurName": "Surfriday"
-    },
-    {
-      "id": "942e",
-      "FirstName": "blank",
-      "SurName": "blank"
+      "FirstName": "Lorna",
+      "SurName": "Gordon Smith"
     }
   ],
   "Sellers": [
@@ -125,21 +45,6 @@
       "FirstName": "Suzy",
       "SurName": "Brown",
       "id": "f182"
-    },
-    {
-      "id": "39e2",
-      "FirstName": "rhfyh",
-      "SurName": "thyhty"
-    },
-    {
-      "id": "41ce",
-      "FirstName": "tyjyj",
-      "SurName": "ukjtgukguk"
-    },
-    {
-      "id": "3654",
-      "FirstName": "thrtrt",
-      "SurName": "rtrtrty"
     }
   ],
   "Properties": [
@@ -170,7 +75,7 @@
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "No",
-      "SaleStatus": "FORSALE",
+      "SaleStatus": "SOLD",
       "id": "72f8"
     },
     {
@@ -184,84 +89,51 @@
       "id": "648b"
     },
     {
-      "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
-      "Address": "Our House",
-      "Price": 1000000,
-      "Bedrooms": 4,
-      "Bathrooms": 2,
-      "Garden": "Yes",
-      "SaleStatus": "WITHDRAWN",
-      "id": "ms84"
-    },
-    {
-      "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
-      "Address": "In the middle of our street",
-      "Price": 75000,
-      "Bedrooms": 2,
-      "Bathrooms": 1,
-      "Garden": "Yes",
-      "SaleStatus": "SOLD",
-      "id": "h723"
-    },
-    {
-      "id": "cdc8",
-      "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
-      "Address": "ergerthryhftyjhtyj",
-      "Price": "1000000",
-      "Bedrooms": "5",
-      "Bathrooms": "2",
-      "Garden": "No",
-      "SaleStatus": "FORSALE"
-    },
-    {
-      "id": "6cee",
-      "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
-      "Address": "3333",
-      "Price": "33",
-      "Bedrooms": 1,
-      "Bathrooms": 1,
+      "id": "b1b0",
+      "ImageUrl": "ree",
+      "Address": "dennis",
+      "Price": "30000000000",
+      "Bedrooms": "16",
+      "Bathrooms": "16",
       "Garden": "Yes",
       "SaleStatus": "FORSALE"
+    }
+  ],
+  "Bookings": [
+    {
+      "id": "f17b",
+      "date": "2024-06-26",
+      "time": "12to1",
+      "property": "25 Gresham Street, London",
+      "buyer": "Andrew Rennie"
     },
     {
-      "id": "bbdc",
-      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
-      "Address": "22222",
-      "Price": "3333",
-      "Bedrooms": "2",
-      "Bathrooms": "2",
-      "Garden": "No",
-      "SaleStatus": "FORSALE"
+      "id": "eac8",
+      "date": "2024-06-12",
+      "time": "12to1",
+      "property": "Buckhingham Palace",
+      "buyer": "Praveen Karnam"
     },
     {
-      "id": "aa88",
-      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
-      "Address": "222",
-      "Price": "3",
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": "Yes",
-      "SaleStatus": "FORSALE"
+      "id": "678a",
+      "date": "2024-06-14",
+      "time": "11to12",
+      "property": "Edinburgh Castle",
+      "buyer": "Lorna Gordon Smith"
     },
     {
-      "id": "90e9",
-      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
-      "Address": "lorna",
-      "Price": "1000000",
-      "Bedrooms": "9",
-      "Bathrooms": "9",
-      "Garden": "No",
-      "SaleStatus": "FORSALE"
+      "id": "64ff",
+      "date": "2024-06-10",
+      "time": "8to9",
+      "property": "Edinburgh Castle",
+      "buyer": "Suzy Brown"
     },
     {
-      "id": "bfe7",
-      "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
-      "Address": "jordan ",
-      "Price": "9999999999999",
-      "Bedrooms": "9999",
-      "Bathrooms": 0,
-      "Garden": "",
-      "SaleStatus": ""
+      "id": "5734",
+      "date": "2024-06-07",
+      "time": "12to1",
+      "property": "Edinburgh Castle",
+      "buyer": "Suzy Brown"
     }
   ]
 }
