@@ -333,7 +333,8 @@
   min-height: 350px;
   background-color: #F7F7F8;
   border: #D6CFCB dotted 1px;
-  box-shadow: 1px 1px 10px 1px #d6cfcb;
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 10px 1px #d6cfcb; */
 }
 
 .padded-property-container {
@@ -349,7 +350,7 @@
 }
 
 .salestatus {
-  float: right;
+  justify-self: flex-end;
 }
 
 .item-card:hover {
@@ -357,6 +358,7 @@
 }
 
 .property-img {
+  border-radius: 5px;
   min-width: 250px;
   max-width: 20vw;
 }
@@ -391,11 +393,21 @@
 .property-address {
   font-size: 1.4vw;
   font-weight: bold;
+  max-width: 70%;
 }
 
 .property-price {
   font-weight: 600;
   line-height: 1;
+}
+
+.salestatus {
+  align-self: center;
+  padding: 2px;
+  background-color: #565264;
+  color: #F7F7F8;
+  border-radius: 3px;
+  border: #706677 1px dotted;
 }
 
 /* REGISTER SELLER  */
