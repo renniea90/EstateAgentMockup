@@ -108,6 +108,7 @@ export default function AddProperty({fetchData}) {
         type="Number"
         required
         value={Price}
+        min={0}
         // event is on change ,  target value is whats in the input box
         onChange={(e) => setPrice(e.target.value)}
       />
@@ -126,6 +127,7 @@ export default function AddProperty({fetchData}) {
         type="number"
         required
         value={Bedrooms}
+        min={0}
         // event
         onChange={(e) => setBedrooms(e.target.value)}
       />
@@ -135,6 +137,7 @@ export default function AddProperty({fetchData}) {
         type="number"
         required
         value={Bathrooms}
+        min={0}
         // event
         onChange={(e) => setBathrooms(e.target.value)}
       />
