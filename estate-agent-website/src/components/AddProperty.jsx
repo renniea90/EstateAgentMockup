@@ -4,12 +4,6 @@ import { SiThenorthface } from "react-icons/si";
 import Data from "../data/Data.json";
 import DisplayProperty from "./DisplayProperty";
 
-function RefreshData(){
-
-
-}
-
-
 export default function AddProperty({fetchData}) {
   // create state
   const [ImageUrl, setImageUrl] = useState("");
@@ -90,7 +84,9 @@ export default function AddProperty({fetchData}) {
           <option value={item.ID}>{item.FirstName + " " + item.SurName}</option>
         ))}
       </select>
-      <br /> <br /> <br />
+      <br />
+      <br />
+      <br />
       <label htmlFor="fname"> Address :</label>
       <input
         id="fname"
