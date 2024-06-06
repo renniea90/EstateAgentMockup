@@ -65,8 +65,23 @@ const FindProperty = () => {
                                     if (parseInt(maxPrice.options[i].value) < parseInt(e.target.value)) { maxPrice.remove(i); }
                                 }
 
+
+                    <div className="price">
+                        <div className="price-heading">
+                            <p>PRICE</p>
+                        </div>
+                        <div className="price-max">
+                            <select name="PriceMax" id="PriceMax" onChange={(e) => {
+                                setPriceMax(e.target.value)
+                                const minPrice = document.getElementById("PriceMin")
+                                // console.log("Selected index is:" + e.target.selectedIndex + "and length is: " + minPrice.options.length)
+                                for (let i = minPrice.options.length - 1; i > e.target.selectedIndex; i--) {
+                                    //   console.log("i is: " + i)
+                                    //   console.log("Min Price index of i: " + minPrice.options[i].value)
+                                    if (parseInt(minPrice.options[i].value) > parseInt(e.target.value)) { minPrice.remove(i) }
+                                }
                             }}>
-                                <option value="0">No Min</option>
+                                <option value="0">No Max</option>
                                 <option value="10000">£10,000</option>
                                 <option value="20000">£20,000</option>
                                 <option value="30000">£30,000</option>
@@ -159,6 +174,7 @@ const FindProperty = () => {
 
                             </select>
                         </div>
+
                         <div className="price-to">
                             <p>to</p>
                         </div>                        
@@ -270,7 +286,6 @@ const FindProperty = () => {
 
                             </select>
                         </div>
-
                     </div>
 
                     <div className="bathrooms">
@@ -281,6 +296,7 @@ const FindProperty = () => {
                             <select name="BathsMin" id="BathsMin" onChange={(e) => {
                                 setBathRoomsMin(e.target.value)
                                 const maxBaths = document.getElementById("BathsMax")
+
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 let tempValue = maxBaths.options[maxBaths.selectedIndex].value
                                 if(parseInt(maxBaths.options[1].value) > parseInt(e.target.value)){
@@ -308,10 +324,12 @@ const FindProperty = () => {
                         <div className="bathrooms-to">
                             <p>to</p>
                         </div>
+
                         <div className="bathrooms-max">
                             <select name="BathsMax" id="BathsMax" onChange={(e) => {
                                 setBathRoomsMax(e.target.value)
                                 const minBaths = document.getElementById("BathsMin")
+
                                 let tempValue = minBaths.options[minBaths.selectedIndex].value
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 if(parseInt(e.target.value) === 0 || parseInt(minBaths.options[minBaths.length-1].value) < parseInt(e.target.value)){
@@ -322,6 +340,7 @@ const FindProperty = () => {
                                     if (parseInt(minBaths.options[i].value) > parseInt(e.target.value) && parseInt(e.target.value)>0) { minBaths.remove(i) }
                                 }
                         }}>
+
                                 <option value="0">No Max</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -336,7 +355,6 @@ const FindProperty = () => {
                             </select>
                         </div>
                     </div>
-
                     <div className="bedrooms">
                         <div className="bedrooms-heading">
                             <p>BEDROOMS</p>
@@ -345,6 +363,7 @@ const FindProperty = () => {
                             <select name="BedsMin" id="BedsMin" onChange={(e) => {
                                 setBedRoomsMin(e.target.value)
                                 const maxBeds = document.getElementById("BedsMax")
+
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 let tempValue = maxBeds.options[maxBeds.selectedIndex].value
                                 if(parseInt(maxBeds.options[1].value) > parseInt(e.target.value)){
@@ -353,6 +372,7 @@ const FindProperty = () => {
                                 for (let i = maxBeds.options.length - 1; i > 0; i--) {
                                     if(maxBeds.options[i].value===tempValue){maxBeds.selectedIndex=i}
                                     if (parseInt(maxBeds.options[i].value) < parseInt(e.target.value) ) { maxBeds.remove(i); }
+
                                 }
 
                             }}>
@@ -366,16 +386,19 @@ const FindProperty = () => {
                                 <option value="7">7</option>
                                 <option value="8">8</option>
                                 <option value="9">9</option>
+
                                 <option value="999999999">10+</option>
                             </select>
                         </div>
                         <div className="bedrooms-to">
                             <p>to</p>
                         </div>
+
                         <div className="bedrooms-max">
                             <select name="BedsMax" id="BedsMax" onChange={(e) => {
                                 setBedRoomsMax(e.target.value)
                                 const minBeds = document.getElementById("BedsMin")
+
                                 let tempValue = minBeds.options[minBeds.selectedIndex].value
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 console.log("target value is " + e.target.value)
@@ -386,6 +409,7 @@ const FindProperty = () => {
                                 for (let i = minBeds.options.length - 1; i > 0; i--) {
                                     if(minBeds.options[i].value===tempValue){minBeds.selectedIndex=i}
                                     if (parseInt(minBeds.options[i].value) > parseInt(e.target.value) && parseInt(e.target.value)>0) { minBeds.remove(i) }
+
                                 }
 
                             }}>
@@ -409,7 +433,9 @@ const FindProperty = () => {
                             <p>GARDEN?</p>
                         </div>
                         <div className="checkbox">
+
                             <input type="checkbox" name="Garden" id="chkHasGarden" value={garden} onChange={(e) => {
+
                                 setGarden(e.target.checked)
                             }} />
                         </div>
@@ -425,6 +451,7 @@ const FindProperty = () => {
                 <span style={{ color: "red" }} id="ProSearchError"></span>
             </form>
         </div>
+
         <div hidden>
         {/* Selects to be hidden and be used to refresh / rest the dorpdowns visible in screen */}
 
