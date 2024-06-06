@@ -22,7 +22,6 @@ export function PropProvider({children}) {
             setBathRoomsMin(minBaths)
             setBathRoomsMax(maxBaths)
             setHasGarden(hasGarden)
-            console.log("From inside context - garden is: " + hasGarden)
         }
 
         const PropFilters = {
