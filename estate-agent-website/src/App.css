@@ -284,6 +284,35 @@
   grid-area: reset;
 }
 
+.amend-submit-btn, .appt-btn, .submit-filter-btn {
+  background-color: #A6808C;
+  border-radius: 5px;
+  border: 1px solid #565264;
+  display: inline-block;
+  cursor: pointer;
+  color: #F7F7F8;
+  font-size: 1.5vw;
+  padding: 0.6vw 0.9vw;
+  text-decoration: none;
+}
+
+.appt-btn {
+  font-size: 1vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.amend-submit-btn:active {
+  position: relative;
+  top: 1px;
+}
+
 .filter-btn {
   background-color: #F7F7F8;
   border-radius: 5px;
@@ -291,8 +320,8 @@
   display: inline-block;
   cursor: pointer;
   color: #565264;
-  font-size: 20px;
-  padding: 16px 31px;
+  font-size: 1.5vw;
+  padding: 0.6vw 0.9vw;
   text-decoration: none;
 }
 
@@ -371,6 +400,33 @@
 .WITHDRAWN .appt-btn,
 .SOLD .appt-btn {
   display: none;
+}
+
+.edit-btn {
+  background-color: #A6808C;
+  border-radius: 5px;
+  border: 1px solid #565264;
+  display: inline-block;
+  cursor: pointer;
+  color: #F7F7F8;
+  font-size: 1.5vw;
+  padding: 0.6vw 0.9vw;
+  text-decoration: none;
+  font-size: 1vw;
+}
+
+.edit-btn:hover {
+  text-decoration: underline;
+}
+
+.appt-link {
+  color: #F7F7F8;
+  text-decoration: none;
+  display: block;
+}
+
+.appt-btn:hover {
+  text-decoration: underline;
 }
 
 .property-data {

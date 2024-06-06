@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import PropertyCard from './PropertyCard';
 import { PropContext } from "../context/prop-context"
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 export default function DisplayProperty({ id, apiData, fetchData, handleClose, handleShow }) {
@@ -38,7 +37,6 @@ export default function DisplayProperty({ id, apiData, fetchData, handleClose, h
   useEffect(() => {
     setEditID(edit)
 }, [edit]);
-
 
   // gotFilter will be true if user input is coming from the Find Property Component. If solid, filter the JSON and display only the result
   if (gotFilter) {
@@ -99,7 +97,6 @@ export default function DisplayProperty({ id, apiData, fetchData, handleClose, h
             setEditGarden={setEditGarden}
             setEditImageUrl={setEditImageUrl}
             setEditSaleStatus={setEditSaleStatus}
-            // sendUpdate={sendUpdate}
           />
 
         ))

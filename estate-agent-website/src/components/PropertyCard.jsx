@@ -46,6 +46,7 @@ export default function PropertyCard({ editID, setEditID, setEdit, id, ImageUrl,
         .then(fetchData)
         .then(setEdit(""))
         .then(handleClose())
+        .then(alert("Property details amended successfully"))
   }
 
   return (
@@ -64,13 +65,14 @@ export default function PropertyCard({ editID, setEditID, setEdit, id, ImageUrl,
         </div>
         <div className="flex space-between">
           <button className="appt-btn btn-left">
-            <Link to='/bookings'>Book an appointment</Link>
+            <Link to='/bookings' className="appt-link">Book an appointment</Link>
           </button>
+          <button onClick={handleShow} className="edit-btn">Edit</button>
           {/* <UpdateProperty onClick={EditProperty()} id={editID} Address={editAddress} Price={editPrice} Bedrooms={editBedrooms} Bathrooms={editBathrooms} Garden={editGarden} ImageUrl={editImageUrl} SaleStatus={editSaleStatus} handleClose={handleClose} handleShow={handleShow} /> */}
         </div>
       </div>
       <>
-        <button onClick={handleShow}>Edit</button>
+       
         <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
           <Modal.Header closeButton>
             <Modal.Title>EDIT PROPERTY DATA</Modal.Title>
@@ -78,50 +80,50 @@ export default function PropertyCard({ editID, setEditID, setEdit, id, ImageUrl,
           <Modal.Body>
             <div>
               <form onSubmit={sendUpdate} id="update-property">
-                <div class="form-container">
-                  <div class="address-title">
+                <div className="form-container">
+                  <div className="address-title">
                     <p>Address:</p>
                   </div>
-                  <div class="price-title">
+                  <div className="price-title">
                     <p>Price:</p>
                   </div>
-                  <div class="bedrooms-title">
+                  <div className="bedrooms-title">
                     <p>Bedrooms:</p>
                   </div>
-                  <div class="bathrooms-title">
+                  <div className="bathrooms-title">
                     <p>Bathrooms:</p>
                   </div>
-                  <div class="garden-title">
+                  <div className="garden-title">
                     <p>Garden:</p>
                   </div>
-                  <div class="imageUrl-title">
+                  <div className="imageUrl-title">
                     <p>Image URL:</p>
                   </div>
-                  <div class="status-title">
+                  <div className="status-title">
                     <p>Status:</p>
                   </div>
-                  <div class="address-input">
+                  <div className="address-input">
                     <input required type="text" defaultValue={editAddress} onChange={(e) => setEditAddress(e.target.value)} />
                   </div>
-                  <div class="price-input">
+                  <div className="price-input">
                     <input required type="number" min={0} defaultValue={editPrice} onChange={(e) => setEditPrice(e.target.value)} />
                   </div>
-                  <div class="bedrooms-input">
+                  <div className="bedrooms-input">
                     <input required type="number" min={0} defaultValue={editBedrooms} onChange={(e) => setEditBedrooms(e.target.value)} />
                   </div>
-                  <div class="bathrooms-input">
+                  <div className="bathrooms-input">
                     <input required type="number" min={0} defaultValue={editBathrooms} onChange={(e) => setEditBathrooms(e.target.value)} />
                   </div>
-                  <div class="garden-input">
+                  <div className="garden-input">
                     <select required type="text" defaultValue={editGarden} onChange={(e) => setEditGarden(e.target.value)}>
                       <option>Yes</option>
                       <option>No</option>
                     </select>
                   </div>
-                  <div class="url-input">
+                  <div className="url-input">
                     <input required type="text" defaultValue={editImageUrl} onChange={(e) => setEditImageUrl(e.target.value)} />
                   </div>
-                  <div class="status-input">
+                  <div className="status-input">
                     <select required defaultValue={editSaleStatus} onChange={(e) => setEditSaleStatus(e.target.value)}>
                       <option>FORSALE</option>
                       <option>WITHDRAWN</option>
@@ -134,7 +136,7 @@ export default function PropertyCard({ editID, setEditID, setEdit, id, ImageUrl,
           </Modal.Body>
           <Modal.Footer>
             <button variant="secondary" className="filter-btn" onClick={handleClose}>Cancel</button>
-            <button form="update-property" variant="primary" className="filter-btn" >Amend</button>
+            <button form="update-property" variant="primary" className="amend-submit-btn" >Amend</button>
           </Modal.Footer>
         </Modal>
       </>
