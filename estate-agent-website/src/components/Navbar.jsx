@@ -19,6 +19,9 @@ export default function Navbar() {
                 <li className="list-item">
                     <Link to='/sellers' className="link">SELLERS</Link>
                 </li>
+                <li className="list-item">
+                    <Link to='/Bookings' className="link">BOOKINGS</Link>
+                </li>
             </ul>
             <p className="repo-link">
                 <Link to='https://github.com/SuzyQ-2117/EstateAgentMockup' title="GitHub Repo" target="_blank" className="link">{repo}</Link>

@@ -27,6 +27,7 @@ export default function HomePage() {
     fetchData();
   }, []);
   // Load values from context
+
   return (
     <PropProvider>
       <div className="page-content">
@@ -40,13 +41,7 @@ export default function HomePage() {
           <AddProperty fetchData={fetchData} />
         </div>
       </div>
-
-
-
-
-
-
-      
     </PropProvider>
+
   );
 }

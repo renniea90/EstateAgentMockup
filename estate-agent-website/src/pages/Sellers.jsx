@@ -1,8 +1,10 @@
 import Data from '../data/Data.json'
 import AllSellers from '../components/AllSellers'
 import RegisterSeller from '../components/RegisterSeller'
+import AddBookings from '../components/AddBooking'
 import '../CSS/SellersPage.css'
 import { useEffect, useState } from 'react';
+
 
 export default function SellersPage() {
 

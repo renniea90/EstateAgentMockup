@@ -11,6 +11,8 @@ import BuyersPage from './pages/Buyers';
 import SellersPage from './pages/Sellers';
 
 import { PropContext } from './context/prop-context';
+import AddBookings from './components/AddBooking';
+import BookingsPage from './pages/Bookings';
 
 function App() {
   return (
@@ -27,8 +29,10 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/buyers' element={<BuyersPage />} />
           <Route path='/sellers' element={<SellersPage />} />
+          <Route path='/bookings' element={<BookingsPage />} />
         </Routes>
       </BrowserRouter>
+
 
     </div>
   );

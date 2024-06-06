@@ -1,0 +1,83 @@
+/* BUYERS PAGE */
+
+.booking .half-white-container-left {
+    margin: 2vw 2vw 2vw 10vw;
+    padding: 1vw;
+    width: 50vw;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px #d6cfcb;
+  }
+  
+  .booking .half-white-container-right {
+    margin: 2vw 10vw 2vw 2vw;
+    padding: 1vw;
+    max-width: 50vw;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px #d6cfcb;
+  }
+  
+  .booking .color-background {
+    background-color: #706677;
+  }
+  
+  .booking .customer-grid {
+    max-width: 100%;
+    flex: auto;
+    padding: 2vw;
+    margin: 0.1vw;
+    background-color: #ccb7ae;
+  }
+  
+  .booking table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .booking thead {
+    background-color: #A6808C;
+    color: #F7F7F8;
+    border-bottom: #565264 1px solid;
+  }
+  
+  .booking .th-border {
+    border-left: #565264 1px solid;
+    border-right: #565264 1px solid;
+  }
+  
+  .booking .td-border {
+    border-left: #565264 1px solid;
+    border-right: #565264 1px solid;
+  }
+  
+  .booking .hover:hover {
+    background-color: #D6CFCB;
+  }
+  
+  /* REGISTER BUYER  */
+  .booking .register-buyer {
+    align-self: center;
+    max-width: 50vw;
+  }
+  
+  .booking .flex-register {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid silver;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .booking .details {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    max-width: 50vw;
+  }
+  
+  .booking .name-input {
+    margin: 10px;
+  }
+  
+  .booking input {
+    max-width: 20vw;
+  }
