@@ -68,17 +68,9 @@ export default function AddProperty({fetchData}) {
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* <label>Existing Seller : </label>
-      <select onChange={(e) => CheckifExisitngSeller(e.target.value === "Yes")}>
-        <option value=""></option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-      </select> */}
-      {/* <br /> <br /> <br /> */}
+ 
       <label>Existing Sellers : </label>
-      <select name="Sellers"
-        onChange={(e) => setSeller(e.target.value)}
-      >
+      <select name="Sellers" onChange={(e) => setSeller(e.target.value)} value={Seller}>
         <option value=""></option>
         {Data.Sellers.map((item) => (
           <option value={item.ID}>{item.FirstName + " " + item.SurName}</option>

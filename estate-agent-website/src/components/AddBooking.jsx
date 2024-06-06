@@ -14,7 +14,7 @@ const yyyy = today.getFullYear();
 const formattedDate = yyyy + '-' + mm + '-' + dd;
 
 
-  
+
     // create state
 
   const [date, setDate] = useState("");
@@ -80,7 +80,7 @@ const formattedDate = yyyy + '-' + mm + '-' + dd;
 
   return (
     <div className="register-buyer">
-    <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div>
              <div className="flex-register details">
                         <div className="name-input left">
@@ -103,49 +103,42 @@ const formattedDate = yyyy + '-' + mm + '-' + dd;
                                         ))}
                                 </select>
                         </div>
-                     </div>
-  
-        <div>
-            <div className="flex-register details">
-                 <div className="name-input left">
+                        <div className="name-input ">
+                                <p>  Date :</p>
+                                <input
+                                    id="fname"
+                                    type="date"
+                                    required
+                                    value={date}
+                                    min= {formattedDate}
+                                    // event
+                                    onChange={(e) => setDate(e.target.value)}
+                                />
+                        </div>  
+                        <div className="name-input">
+                            <p>Time :</p>
+                            <select
+                                value={time}
+                                // event
+                                onChange={(e) => setTime(e.target.value)}
+                            >
+                                <option value=""></option>
+                                <option value="8-9am">8am to 9am</option>
+                                <option value="9-10am">9am to 10am</option>
+                                <option value="10-11am">10am to 11am</option>
+                                <option value="11am-12pm">11am to 12pm</option>
+                                <option value="12-1pm">12pm to 1pm</option>
+                                <option value="1-2pm">1pm to 2pm</option>
+                                <option value="2-3pm">2pm to 3pm</option>
+                                <option value="3-4pm">3pm to 4pm</option>
+                                <option value="4-5pm">4pm to 5pm</option>
+                            </select>
+                        </div>
 
-                        <p>  Date :</p>
-                        <input
-            
-                            id="fname"
-                            type="date"
-                            required
-                            value={date}
-                            min= {formattedDate}
-                            // event
-                            onChange={(e) => setDate(e.target.value)}
-                        />
-                </div>  
-                <div className="name-input right">
-                        <p>Time :</p>
-                        <select
-                            value={time}
-                            // event
-                            onChange={(e) => setTime(e.target.value)}
-                        >
-                            <option value=""></option>
-                            <option value="8to9">8am to 9am</option>
-                            <option value="9to10">9am to 10am</option>
-                            <option value="10to11">10am to 11am</option>
-                            <option value="11to12">11am to 12pm</option>
-                            <option value="12to1">12pm to 1pm</option>
-                            <option value="1to2">1pm to 2pm</option>
-                            <option value="2to3">2pm to 3pm</option>
-                            <option value="3to4">3pm to 4pm</option>
-                            <option value="4to5">4pm to 5pm</option>
-                        </select>
-                    </div>
                     </div>
                 <button className="submit-button">Add Booking</button>
-       
-      </div>
-      </div>
-    </form>
+            </div>
+        </form>
     </div>
   );
 }

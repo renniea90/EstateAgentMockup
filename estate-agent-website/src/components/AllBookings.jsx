@@ -29,8 +29,8 @@ function AllBookings({ fetchData }) {
     <div>
     <table>
       <thead>
-      <div className="">
-        <p>Properties For Sale: </p>
+      <div className="property-option">
+        <p>Select Property : </p>
 
                 <select name="Propertys" onChange={(e) => setProperty(e.target.value)}>
                 <option value="">All Bookings</option>
@@ -38,6 +38,7 @@ function AllBookings({ fetchData }) {
                     <option value={item.Address}>{item.Address}</option>
                 ))}
                 </select>
+    
       </div>
         <tr>
           {/* <th>ID</th> */}
@@ -54,9 +55,29 @@ function AllBookings({ fetchData }) {
           .map((booking) => (
             <tr className="hover" key={booking.id}>
               {/* <td>{booking.id}</td> */}
+            
               <td className="td-border">{booking.buyer}</td>
               <td className="td-border">{booking.property}</td>
-              <td className="td-border">{booking.date}</td>
+              {/* <td className="td-border" >{booking.date}</td> */}
+
+              <td className="td-border" >
+                
+              {(() => {
+                    const dateObj = new Date(booking.date);
+                    const day = dateObj.getDate();
+                    const month = dateObj.getMonth() + 1; // Months are zero-indexed
+                    const year = dateObj.getFullYear();
+
+                    // Add leading zeros if necessary
+                    const formattedDate = `${day < 10 ? "0" : ""}${day}/${
+                    month < 10 ? "0" : ""
+                    }${month}/${year}`;
+
+                    return formattedDate;
+                 })()}
+</td>
+              
+              
               <td className="td-border">{booking.time}</td>
               <td className="td-border">
                 <button
