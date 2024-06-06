@@ -37,23 +37,6 @@ export default function SellersPage() {
           <RegisterSeller fetchSellerData={fetchSellerData} seller={seller} />
         </div>
       </div>
-      
     </div>
-
-
-
-
-
-
-
-
-
-
-    // <div>
-    //     <div className="customer-grid">
-    //       <AllSellers />
-    //     </div>
-    //     <RegisterSeller/>
-    // </div>
   )
 }

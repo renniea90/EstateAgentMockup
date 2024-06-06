@@ -209,6 +209,16 @@
       "id": "05d9",
       "FirstName": "k",
       "SurName": "k"
+    },
+    {
+      "id": "a9f9",
+      "FirstName": "d",
+      "SurName": "d"
+    },
+    {
+      "id": "9aff",
+      "FirstName": "h",
+      "SurName": "k"
     }
   ],
   "Sellers": [
@@ -286,7 +296,8 @@
       "Bathrooms": 2,
       "Garden": "Yes",
       "SaleStatus": "FORSALE",
-      "id": "63a8"
+      "id": "63a8",
+      "bathrooms": 2
     },
     {
       "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
@@ -356,7 +367,8 @@
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "Yes",
-      "SaleStatus": "FORSALE"
+      "SaleStatus": "WITHDRAWN",
+      "bathrooms": 1
     },
     {
       "id": "bbdc",
@@ -397,6 +409,16 @@
       "Bathrooms": 0,
       "Garden": "",
       "SaleStatus": "WITHDRAWN"
+    },
+    {
+      "id": "aeb9",
+      "ImageUrl": "vfffv",
+      "Address": "jjjjj",
+      "Price": "05",
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "No",
+      "SaleStatus": "FORSALE"
     }
   ]
 }

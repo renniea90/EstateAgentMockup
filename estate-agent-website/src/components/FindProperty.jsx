@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-
 import { PropContext } from "../context/prop-context";
 
 const FindProperty = () => {
