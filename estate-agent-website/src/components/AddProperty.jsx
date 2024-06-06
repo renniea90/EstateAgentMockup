@@ -4,9 +4,6 @@ import { SiThenorthface } from "react-icons/si";
 import Data from "../data/Data.json";
 import DisplayProperty from "./DisplayProperty";
 
-
-
-
 export default function AddProperty({fetchData}) {
   // create state
   const [ImageUrl, setImageUrl] = useState("");
@@ -87,7 +84,9 @@ export default function AddProperty({fetchData}) {
           <option value={item.ID}>{item.FirstName + " " + item.SurName}</option>
         ))}
       </select>
-      <br /> <br /> <br />
+      <br />
+      <br />
+      <br />
       <label htmlFor="fname"> Address :</label>
       <input
         id="fname"
@@ -105,6 +104,7 @@ export default function AddProperty({fetchData}) {
         type="Number"
         required
         value={Price}
+        min={0}
         // event is on change ,  target value is whats in the input box
         onChange={(e) => setPrice(e.target.value)}
       />
@@ -123,6 +123,7 @@ export default function AddProperty({fetchData}) {
         type="number"
         required
         value={Bedrooms}
+        min={0}
         // event
         onChange={(e) => setBedrooms(e.target.value)}
       />
@@ -132,6 +133,7 @@ export default function AddProperty({fetchData}) {
         type="number"
         required
         value={Bathrooms}
+        min={0}
         // event
         onChange={(e) => setBathrooms(e.target.value)}
       />

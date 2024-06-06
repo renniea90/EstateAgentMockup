@@ -1,19 +1,19 @@
 import { FaBed, FaBath } from "react-icons/fa";
 import { PiPottedPlantFill } from "react-icons/pi";
-import '../CSS/PropertyDisplay.css'
-import { Link } from 'react-router-dom'
+import { useState } from "react";
 
-export default function PropertyCard({ id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
+export default function PropertyCard({ setEdit, setEditAddress, setEditPrice, setEditBedrooms, setEditBathrooms, setEditGarden,setEditImageUrl, setEditSaleStatus, id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
 
-
-
-  const changeStatus = (SaleStatus) => {
-    fetch('http://localhost:8000/Properties/' + id, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ SaleStatus }),
-    })
-      .then(fetchData)
+  function EditProperty() {
+    console.log("Property selected"+id)
+    setEditAddress(address)
+    setEditPrice(price)
+    setEditBedrooms(bedrooms)
+    setEditBathrooms(bathrooms)
+    setEditGarden(garden)
+    setEditImageUrl(ImageUrl)
+    setEditSaleStatus(salestatus)
+    setEdit(id)
   }
 
   return (
@@ -31,10 +31,8 @@ export default function PropertyCard({ id, ImageUrl, address, price, bedrooms, b
           <p className="p-five property-data property-garden"> <span><PiPottedPlantFill /></span> {garden} </p>
         </div>
         <div className="flex space-between">
-          <button className="appt-btn btn-left"> <Link to='/Bookings' className="link">Book a Viewing</Link></button>
-          <button className="withdraw-btn btn-right" onClick={() => changeStatus("WITHDRAWN")}>Withdraw Property</button>
-          {/* only show the relevant button, so the IF statement would be appear - ternary op */}
-          <button className="resubmit-btn btn-right" onClick={() => changeStatus("FORSALE")}>Resubmit Property</button>
+          <button className="appt-btn btn-left">Book an Appointment</button>
+          <button onClick={() => EditProperty()}>Edit</button>
         </div>
       </div>
 

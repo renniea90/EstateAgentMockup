@@ -1,5 +1,5 @@
 import AddProperty from "../components/AddProperty";
-import "../CSS/Home.css";
+import "../CSS/HomePage.css";
 import { useState, useContext, useEffect } from "react";
 import DisplayProperty from "../components/DisplayProperty";
 import FindProperty from "../components/FindProperty";
@@ -13,6 +13,9 @@ export default function HomePage() {
   //fetches data from properties object in JSON file then feed into "AddProperty" so that it can refresh the data after a propoerty is added
   // and passes the api state through to "DisplayProperty" to include apidata for all, fetch data for status change and filter results for filtering
 
+
+
+
   let [apiData, setData] = useState([]);
   const fetchData = () => {
     fetch("http://localhost:8000/Properties")
@@ -20,25 +23,25 @@ export default function HomePage() {
       .then((data) => setData(data));
   };
 
-    useEffect(() => {
+  useEffect(() => {
     fetchData();
   }, []);
-
   // Load values from context
-  
-    return (
-        <PropProvider>
-          <div className="page-content">
-            <div className="white-container">
-              {/* <FindProperty /> */}
-             </div>
-            <div className="white-container">
-              <DisplayProperty apiData={apiData} fetchData={fetchData} filterResults="false" />
-            </div>
-            <div className="white-container">
-              <AddProperty fetchData={fetchData}/>
-            </div>
-          </div>
-      </PropProvider>
+
+  return (
+    <PropProvider>
+      <div className="page-content">
+        <div className="white-container">
+          <FindProperty />
+        </div>
+        <div className="white-container">
+          <DisplayProperty apiData={apiData} fetchData={fetchData} filterResults="false" />
+        </div>
+        <div className="white-container">
+          <AddProperty fetchData={fetchData} />
+        </div>
+      </div>
+    </PropProvider>
+
   );
 }
