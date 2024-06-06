@@ -323,10 +323,10 @@
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
       "Address": "25 Gresham Street, London",
       "Price": 250000,
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": "No",
-      "SaleStatus": "SOLD",
+      "Bedrooms": "7",
+      "Bathrooms": "6",
+      "Garden": "Yes",
+      "SaleStatus": "FORSALE",
       "id": "72f8"
     },
     {
@@ -343,9 +343,9 @@
       "id": "b1b0",
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
       "Address": "dennis",
-      "Price": "30000000000",
+      "Price": "30",
       "Bedrooms": "16",
-      "Bathrooms": "16",
+      "Bathrooms": "8",
       "Garden": "Yes",
       "SaleStatus": "FORSALE"
     },
