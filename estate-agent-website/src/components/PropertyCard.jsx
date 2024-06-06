@@ -2,19 +2,10 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { PiPottedPlantFill } from "react-icons/pi";
 import { useState } from "react";
 
-export default function PropertyCard({ setEditAddress, setEditPrice, setEditBedrooms, setEditBathrooms, setEditGarden,setEditImageUrl, setEditSaleStatus, id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
-
-  const changeStatus = (SaleStatus) => {
-    fetch('http://localhost:8000/Properties/' + id, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ SaleStatus, bathrooms }),
-    })
-      .then(fetchData)
-  }
+export default function PropertyCard({ setEdit, setEditAddress, setEditPrice, setEditBedrooms, setEditBathrooms, setEditGarden,setEditImageUrl, setEditSaleStatus, id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
 
   function EditProperty() {
-    console.log("Property selected")
+    console.log("Property selected"+id)
     setEditAddress(address)
     setEditPrice(price)
     setEditBedrooms(bedrooms)
@@ -22,6 +13,7 @@ export default function PropertyCard({ setEditAddress, setEditPrice, setEditBedr
     setEditGarden(garden)
     setEditImageUrl(ImageUrl)
     setEditSaleStatus(salestatus)
+    setEdit(id)
   }
 
   return (
@@ -39,11 +31,8 @@ export default function PropertyCard({ setEditAddress, setEditPrice, setEditBedr
           <p className="p-five property-data property-garden"> <span><PiPottedPlantFill /></span> {garden} </p>
         </div>
         <div className="flex space-between">
+          <button className="appt-btn btn-left">Book an Appointment</button>
           <button onClick={() => EditProperty()}>Edit</button>
-          <button className="appt-btn INVIS btn-left">Book an Appointment</button>
-          <button className="withdraw-btn btn-right" onClick={() => changeStatus("WITHDRAWN")}>Withdraw Property</button>
-          {/* only show the relevant button, so the IF statement would be appear - ternary op */}
-          <button className="resubmit-btn btn-right" onClick={() => changeStatus("FORSALE")}>Resubmit Property</button>
         </div>
       </div>
 

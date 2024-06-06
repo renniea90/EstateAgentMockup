@@ -29,69 +29,33 @@ export default function DisplayProperty({ id, apiData, fetchData }) {
   let [editGarden,setEditGarden] = useState("")
   let [editImageUrl,setEditImageUrl] = useState("")
   let [editSaleStatus,setEditSaleStatus] = useState("")
+  let [editID, setEditID] = useState("")
 
   useEffect(() => {
-    activateModal()
+    console.log(edit)
+    setEditID(edit)
+    activateModal(edit)
   }, [edit]);
 
   const activateModal = () => {
-    // console.log("Modal activated")
+    console.log("Modal activated "+edit)
     return (
-      <dialog>
-        <div>
-          <form onSubmit={sendUpdate}>
-            <div className="flex">
-              <p>Address:</p>
-              <input required type="text" value={Address} onChange={(e) => setAddress(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Price:</p>
-              <input required type="number" min={0} value={Price} onChange={(e) => setPrice(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Bedrooms:</p>
-              <input required type="number" min={0} value={Bedrooms} onChange={(e) => setBedrooms(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Bathrooms:</p>
-              <input required type="number" min={0} value={Bathrooms} onChange={(e) => setBathrooms(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Garden:</p>
-              <select required type="text" value={Garden} onChange={(e) => setGarden(e.target.value)}>
-                <option>Yes</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div className="flex">
-              <p>Image URL:</p>
-              <input required type="text" value={ImageUrl} onChange={(e) => setImageUrl(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Status:</p>
-              <select required value={SaleStatus} onChange={(e) => setSaleStatus(e.target.value)}>
-                <option>FORSALE</option>
-                <option>WITHDRAWN</option>
-                <option>SOLD</option>
-              </select>
-            </div>
-            <button type="submit">Amend</button>
-          </form>
-        </div>
-      </dialog>
+      console.log("return")
     )
   }
 
-
-  function sendUpdate(e, id, Address, Price, Bedrooms, Bathrooms, Garden, ImageUrl, SaleStatus) {
+  const sendUpdate = (e, Address, Price, Bedrooms, Bathrooms, Garden, ImageUrl, SaleStatus) => {
     e.preventDefault()
-    fetch('http://localhost:8000/Properties/' + edit, {
+    console.log(editAddress)
+    fetch('http://localhost:8000/Properties/'+ editID, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({Address, Price, Bedrooms, Bathrooms, Garden, ImageUrl, SaleStatus}),
+      body: JSON.stringify({ Address:editAddress, Price:editPrice, Bedrooms:editBedrooms, Bathrooms:editBathrooms, Garden:editGarden, ImageUrl:editImageUrl, SaleStatus:editSaleStatus}),
     })
       .then(fetchData)
-      .then(setEdit = (""))
+      .then(setEdit(""))
+      console.log("fetch complete")
+
   }
 
   // gotFilter will be true if user input is coming from the Find Property Component. If solid, filter the JSON and display only the result
@@ -154,8 +118,52 @@ export default function DisplayProperty({ id, apiData, fetchData }) {
             setEditImageUrl={setEditImageUrl}
             setEditSaleStatus={setEditSaleStatus}
           />
+          
         ))
         }
+        {/* <dialog type="modal"> */}
+        <div>
+          <form onSubmit={sendUpdate}>
+            <p>{edit}</p>
+            <div className="flex">
+              <p>Address:</p>
+              <input required type="text" defaultValue={editAddress} onChange={(e) => setEditAddress(e.target.value)}/>
+            </div>
+            <div className="flex">
+              <p>Price:</p>
+              <input required type="number" min={0} defaultValue={editPrice} onChange={(e) => setEditPrice(e.target.value)} />
+            </div>
+            <div className="flex">
+              <p>Bedrooms:</p>
+              <input required type="number" min={0} defaultValue={editBedrooms} onChange={(e) => setEditBedrooms(e.target.value)} />
+            </div>
+            <div className="flex">
+              <p>Bathrooms:</p>
+              <input required type="number" min={0} defaultValue={editBathrooms} onChange={(e) => setEditBathrooms(e.target.value)} />
+            </div>
+            <div className="flex">
+              <p>Garden:</p>
+              <select required type="text" defaultValue={editGarden} onChange={(e) => setEditGarden(e.target.value)}>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div className="flex">
+              <p>Image URL:</p>
+              <input required type="text" defaultValue={editImageUrl} onChange={(e) => setEditImageUrl(e.target.value)} />
+            </div>
+            <div className="flex">
+              <p>Status:</p>
+              <select required defaultValue={editSaleStatus} onChange={(e) => setEditSaleStatus(e.target.value)}>
+                <option>FORSALE</option>
+                <option>WITHDRAWN</option>
+                <option>SOLD</option>
+              </select>
+            </div>
+            <button type="submit">Amend</button>
+          </form>
+        </div>
+      {/* </dialog> */}
       </div>
     )
   };

@@ -362,12 +362,12 @@
     {
       "id": "6cee",
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
-      "Address": "3333",
-      "Price": "33",
+      "Address": "2 The Street, Anywhere",
+      "Price": "35500",
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "Yes",
-      "SaleStatus": "WITHDRAWN",
+      "SaleStatus": "FORSALE",
       "bathrooms": 1
     },
     {
@@ -403,19 +403,19 @@
     {
       "id": "bfe7",
       "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
-      "Address": "jordan ",
-      "Price": "9999999999999",
-      "Bedrooms": "9999",
-      "Bathrooms": 0,
-      "Garden": "",
-      "SaleStatus": "WITHDRAWN"
+      "Address": "1 The Street",
+      "Price": "99999",
+      "Bedrooms": "9",
+      "Bathrooms": "2",
+      "Garden": "No",
+      "SaleStatus": "SOLD"
     },
     {
       "id": "aeb9",
-      "ImageUrl": "vfffv",
-      "Address": "jjjjj",
-      "Price": "05",
-      "Bedrooms": 1,
+      "ImageUrl": "g",
+      "Address": "HELLO THIS IS MY HOUSE",
+      "Price": "50000",
+      "Bedrooms": "3",
       "Bathrooms": 1,
       "Garden": "No",
       "SaleStatus": "FORSALE"
