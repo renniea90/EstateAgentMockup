@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { PropContext } from "../context/prop-context";
-
+ 
 const FindProperty = () => {
     const { populateFilters } = useContext(PropContext)
-
+ 
     //    Add state for each of the Buyer fields
     const [priceMin, setPriceMin] = useState(0)
     const [priceMax, setPriceMax] = useState(0)
@@ -12,21 +12,21 @@ const FindProperty = () => {
     const [bathRoomsMin, setBathRoomsMin] = useState(0)
     const [bathRoomsMax, setBathRoomsMax] = useState(0)
     const [garden, setGarden] = useState(false)
-
+ 
     function AddFilter(e) {
         e.preventDefault();
         console.log(true, priceMin, priceMax, bedRoomsMin, bedRoomsMax, bathRoomsMin, bathRoomsMax, (garden ? "Yes" : "No"))
         populateFilters(true, parseInt(priceMin), parseInt(priceMax), parseInt(bedRoomsMin), parseInt(bedRoomsMax), parseInt(bathRoomsMin), parseInt(bathRoomsMax), (garden ? "Yes" : "No"))
     }
-
+ 
     function ResetList(ListtoReset, SourceList, MinMax) {
         const tempList = document.getElementById(ListtoReset)
         const sourceList = document.getElementById(SourceList)
         tempList.innerHTML = sourceList.innerHTML
         tempList.options[0].innerHTML = MinMax === "Min" ? "No Min" : "No Max"
-
+ 
     }
-
+ 
     function ResetFilters(e) {
         e.preventDefault();
         ResetList("PriceMin", "sourcePrice", "Min")
@@ -39,13 +39,13 @@ const FindProperty = () => {
         tempList.checked = false
         populateFilters(false, 0, 0, 0, 0, 0, 0, "No")
     }
-
+ 
     return (
         <>
         <div className="filter-container">
             <form onSubmit={AddFilter}>
                 <div className="container">
-
+ 
                     <div className="price">
                         <div className="price-heading">
                             <p>PRICE</p>
@@ -59,29 +59,14 @@ const FindProperty = () => {
                                 if(parseInt(maxPrice.options[1].value) > parseInt(e.target.value)){
                                     ResetList("PriceMax","sourcePrice", "Max")
                                 }
-
+ 
                                 for (let i = maxPrice.options.length - 1; i > 0; i--) {
                                     if(maxPrice.options[i].value===tempValue){maxPrice.selectedIndex=i; console.log("Index set done")}
                                     if (parseInt(maxPrice.options[i].value) < parseInt(e.target.value)) { maxPrice.remove(i); }
                                 }
-
-
-                    <div className="price">
-                        <div className="price-heading">
-                            <p>PRICE</p>
-                        </div>
-                        <div className="price-max">
-                            <select name="PriceMax" id="PriceMax" onChange={(e) => {
-                                setPriceMax(e.target.value)
-                                const minPrice = document.getElementById("PriceMin")
-                                // console.log("Selected index is:" + e.target.selectedIndex + "and length is: " + minPrice.options.length)
-                                for (let i = minPrice.options.length - 1; i > e.target.selectedIndex; i--) {
-                                    //   console.log("i is: " + i)
-                                    //   console.log("Min Price index of i: " + minPrice.options[i].value)
-                                    if (parseInt(minPrice.options[i].value) > parseInt(e.target.value)) { minPrice.remove(i) }
-                                }
+ 
                             }}>
-                                <option value="0">No Max</option>
+                                <option value="0">No Min</option>
                                 <option value="10000">£10,000</option>
                                 <option value="20000">£20,000</option>
                                 <option value="30000">£30,000</option>
@@ -92,7 +77,7 @@ const FindProperty = () => {
                                 <option value="80000">£80,000</option>
                                 <option value="90000">£90,000</option>
                                 <option value="100000">£100,000</option>
-
+ 
                                 <option value="110000">£110,000</option>
                                 <option value="120000">£120,000</option>
                                 <option value="130000">£130,000</option>
@@ -103,7 +88,7 @@ const FindProperty = () => {
                                 <option value="180000">£180,000</option>
                                 <option value="190000">£190,000</option>
                                 <option value="200000">£200,000</option>
-
+ 
                                 <option value="210000">£210,000</option>
                                 <option value="220000">£220,000</option>
                                 <option value="230000">£230,000</option>
@@ -119,7 +104,7 @@ const FindProperty = () => {
                                 <option value="450000">£450,000</option>
                                 <option value="475000">£475,000</option>
                                 <option value="500000">£500,000</option>
-
+ 
                                 <option value="550000">£550,000</option>
                                 <option value="600000">£600,000</option>
                                 <option value="650000">£650,000</option>
@@ -130,7 +115,7 @@ const FindProperty = () => {
                                 <option value="900000">£900,000</option>
                                 <option value="950000">£950,000</option>
                                 <option value="1000000">£1,000,000</option>
-
+ 
                                 <option value="1100000">£1,100,000</option>
                                 <option value="1200000">£1,200,000</option>
                                 <option value="1300000">£1,300,000</option>
@@ -141,7 +126,7 @@ const FindProperty = () => {
                                 <option value="1800000">£1,800,000</option>
                                 <option value="1900000">£1,900,000</option>
                                 <option value="2000000">£2,000,000</option>
-
+ 
                                 <option value="2100000">£2,100,000</option>
                                 <option value="2200000">£2,200,000</option>
                                 <option value="2300000">£2,300,000</option>
@@ -149,7 +134,7 @@ const FindProperty = () => {
                                 <option value="2500000">£2,500,000</option>
                                 <option value="2750000">£2,750,000</option>
                                 <option value="3000000">£3,000,000</option>
-
+ 
                                 <option value="3250000">£3,250,000</option>
                                 <option value="3500000">£3,500,000</option>
                                 <option value="3750000">£3,750,000</option>
@@ -168,13 +153,12 @@ const FindProperty = () => {
                                 <option value="9000000">£9,000,000</option>
                                 <option value="9500000">£9,500,000</option>
                                 <option value="10000000">£10,000,000</option>
-
+ 
                                 <option value="12500000">£12,500,000</option>
                                 <option value="15000000">£15,000,000</option>
-
+ 
                             </select>
                         </div>
-
                         <div className="price-to">
                             <p>to</p>
                         </div>                        
@@ -187,7 +171,7 @@ const FindProperty = () => {
                                 if(parseInt(e.target.value) === 0 || parseInt(minPrice.options[minPrice.length-1].value) < parseInt(e.target.value)){
                                     ResetList("PriceMin","sourcePrice", "Min")
                                 }
-                            
+                           
                                 for (let i = minPrice.options.length - 1; i > 0; i--) {
                                     if(minPrice.options[i].value===tempValue){minPrice.selectedIndex=i}
                                     if (parseInt(minPrice.options[i].value) > parseInt(e.target.value) && parseInt(e.target.value)>0) { minPrice.remove(i) }
@@ -204,7 +188,7 @@ const FindProperty = () => {
                                 <option value="80000">£80,000</option>
                                 <option value="90000">£90,000</option>
                                 <option value="100000">£100,000</option>
-
+ 
                                 <option value="110000">£110,000</option>
                                 <option value="120000">£120,000</option>
                                 <option value="130000">£130,000</option>
@@ -215,7 +199,7 @@ const FindProperty = () => {
                                 <option value="180000">£180,000</option>
                                 <option value="190000">£190,000</option>
                                 <option value="200000">£200,000</option>
-
+ 
                                 <option value="210000">£210,000</option>
                                 <option value="220000">£220,000</option>
                                 <option value="230000">£230,000</option>
@@ -231,7 +215,7 @@ const FindProperty = () => {
                                 <option value="450000">£450,000</option>
                                 <option value="475000">£475,000</option>
                                 <option value="500000">£500,000</option>
-
+ 
                                 <option value="550000">£550,000</option>
                                 <option value="600000">£600,000</option>
                                 <option value="650000">£650,000</option>
@@ -242,7 +226,7 @@ const FindProperty = () => {
                                 <option value="900000">£900,000</option>
                                 <option value="950000">£950,000</option>
                                 <option value="1000000">£1,000,000</option>
-
+ 
                                 <option value="1100000">£1,100,000</option>
                                 <option value="1200000">£1,200,000</option>
                                 <option value="1300000">£1,300,000</option>
@@ -253,7 +237,7 @@ const FindProperty = () => {
                                 <option value="1800000">£1,800,000</option>
                                 <option value="1900000">£1,900,000</option>
                                 <option value="2000000">£2,000,000</option>
-
+ 
                                 <option value="2100000">£2,100,000</option>
                                 <option value="2200000">£2,200,000</option>
                                 <option value="2300000">£2,300,000</option>
@@ -261,7 +245,7 @@ const FindProperty = () => {
                                 <option value="2500000">£2,500,000</option>
                                 <option value="2750000">£2,750,000</option>
                                 <option value="3000000">£3,000,000</option>
-
+ 
                                 <option value="3250000">£3,250,000</option>
                                 <option value="3500000">£3,500,000</option>
                                 <option value="3750000">£3,750,000</option>
@@ -280,14 +264,15 @@ const FindProperty = () => {
                                 <option value="9000000">£9,000,000</option>
                                 <option value="9500000">£9,500,000</option>
                                 <option value="10000000">£10,000,000</option>
-
+ 
                                 <option value="12500000">£12,500,000</option>
                                 <option value="15000000">£15,000,000</option>
-
+ 
                             </select>
                         </div>
+ 
                     </div>
-
+ 
                     <div className="bathrooms">
                         <div className="bathrooms-heading">
                             <p>BATHROOMS</p>
@@ -296,7 +281,6 @@ const FindProperty = () => {
                             <select name="BathsMin" id="BathsMin" onChange={(e) => {
                                 setBathRoomsMin(e.target.value)
                                 const maxBaths = document.getElementById("BathsMax")
-
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 let tempValue = maxBaths.options[maxBaths.selectedIndex].value
                                 if(parseInt(maxBaths.options[1].value) > parseInt(e.target.value)){
@@ -306,7 +290,7 @@ const FindProperty = () => {
                                     if(maxBaths.options[i].value===tempValue){maxBaths.selectedIndex=i}
                                     if (parseInt(maxBaths.options[i].value) < parseInt(e.target.value)) { maxBaths.remove(i); }
                                 }
-
+ 
                             }}>
                                 <option value="0">No Min</option>
                                 <option value="1">1</option>
@@ -324,12 +308,10 @@ const FindProperty = () => {
                         <div className="bathrooms-to">
                             <p>to</p>
                         </div>
-
                         <div className="bathrooms-max">
                             <select name="BathsMax" id="BathsMax" onChange={(e) => {
                                 setBathRoomsMax(e.target.value)
                                 const minBaths = document.getElementById("BathsMin")
-
                                 let tempValue = minBaths.options[minBaths.selectedIndex].value
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 if(parseInt(e.target.value) === 0 || parseInt(minBaths.options[minBaths.length-1].value) < parseInt(e.target.value)){
@@ -340,7 +322,6 @@ const FindProperty = () => {
                                     if (parseInt(minBaths.options[i].value) > parseInt(e.target.value) && parseInt(e.target.value)>0) { minBaths.remove(i) }
                                 }
                         }}>
-
                                 <option value="0">No Max</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -355,6 +336,7 @@ const FindProperty = () => {
                             </select>
                         </div>
                     </div>
+ 
                     <div className="bedrooms">
                         <div className="bedrooms-heading">
                             <p>BEDROOMS</p>
@@ -363,7 +345,6 @@ const FindProperty = () => {
                             <select name="BedsMin" id="BedsMin" onChange={(e) => {
                                 setBedRoomsMin(e.target.value)
                                 const maxBeds = document.getElementById("BedsMax")
-
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 let tempValue = maxBeds.options[maxBeds.selectedIndex].value
                                 if(parseInt(maxBeds.options[1].value) > parseInt(e.target.value)){
@@ -372,9 +353,8 @@ const FindProperty = () => {
                                 for (let i = maxBeds.options.length - 1; i > 0; i--) {
                                     if(maxBeds.options[i].value===tempValue){maxBeds.selectedIndex=i}
                                     if (parseInt(maxBeds.options[i].value) < parseInt(e.target.value) ) { maxBeds.remove(i); }
-
                                 }
-
+ 
                             }}>
                                 <option value="0">No Min</option>
                                 <option value="1">1</option>
@@ -386,32 +366,28 @@ const FindProperty = () => {
                                 <option value="7">7</option>
                                 <option value="8">8</option>
                                 <option value="9">9</option>
-
                                 <option value="999999999">10+</option>
                             </select>
                         </div>
                         <div className="bedrooms-to">
                             <p>to</p>
                         </div>
-
                         <div className="bedrooms-max">
                             <select name="BedsMax" id="BedsMax" onChange={(e) => {
                                 setBedRoomsMax(e.target.value)
                                 const minBeds = document.getElementById("BedsMin")
-
                                 let tempValue = minBeds.options[minBeds.selectedIndex].value
                                 // If we need to repopulate options that were removed earlier, reset it first and remove afresh
                                 console.log("target value is " + e.target.value)
-
+ 
                                 if(parseInt(e.target.value) === 0 || parseInt(minBeds.options[minBeds.length-1].value) < parseInt(e.target.value)){
                                     ResetList("BedsMin","sourceBedBath", "Min")
                                 }
                                 for (let i = minBeds.options.length - 1; i > 0; i--) {
                                     if(minBeds.options[i].value===tempValue){minBeds.selectedIndex=i}
                                     if (parseInt(minBeds.options[i].value) > parseInt(e.target.value) && parseInt(e.target.value)>0) { minBeds.remove(i) }
-
                                 }
-
+ 
                             }}>
                                 <option value="0">No Max</option>
                                 <option value="1">1</option>
@@ -427,20 +403,18 @@ const FindProperty = () => {
                             </select>
                         </div>
                     </div>
-
+ 
                     <div className="garden">
                         <div className="garden-heading">
                             <p>GARDEN?</p>
                         </div>
                         <div className="checkbox">
-
                             <input type="checkbox" name="Garden" id="chkHasGarden" value={garden} onChange={(e) => {
-
                                 setGarden(e.target.checked)
                             }} />
                         </div>
                     </div>
-
+ 
                     <div className="reset">
                         <button className="reset-filter-btn" onClick={ResetFilters}>Reset Filters</button>
                     </div>
@@ -451,10 +425,9 @@ const FindProperty = () => {
                 <span style={{ color: "red" }} id="ProSearchError"></span>
             </form>
         </div>
-
         <div hidden>
         {/* Selects to be hidden and be used to refresh / rest the dorpdowns visible in screen */}
-
+ 
         <select hidden name="sourcePrice" id="sourcePrice">
             <option value="0">No Min Max</option>
             <option value="10000">£10,000</option>
@@ -467,7 +440,7 @@ const FindProperty = () => {
             <option value="80000">£80,000</option>
             <option value="90000">£90,000</option>
             <option value="100000">£100,000</option>
-
+ 
             <option value="110000">£110,000</option>
             <option value="120000">£120,000</option>
             <option value="130000">£130,000</option>
@@ -478,7 +451,7 @@ const FindProperty = () => {
             <option value="180000">£180,000</option>
             <option value="190000">£190,000</option>
             <option value="200000">£200,000</option>
-
+ 
             <option value="210000">£210,000</option>
             <option value="220000">£220,000</option>
             <option value="230000">£230,000</option>
@@ -494,7 +467,7 @@ const FindProperty = () => {
             <option value="450000">£450,000</option>
             <option value="475000">£475,000</option>
             <option value="500000">£500,000</option>
-
+ 
             <option value="550000">£550,000</option>
             <option value="600000">£600,000</option>
             <option value="650000">£650,000</option>
@@ -505,7 +478,7 @@ const FindProperty = () => {
             <option value="900000">£900,000</option>
             <option value="950000">£950,000</option>
             <option value="1000000">£1,000,000</option>
-
+ 
             <option value="1100000">£1,100,000</option>
             <option value="1200000">£1,200,000</option>
             <option value="1300000">£1,300,000</option>
@@ -516,7 +489,7 @@ const FindProperty = () => {
             <option value="1800000">£1,800,000</option>
             <option value="1900000">£1,900,000</option>
             <option value="2000000">£2,000,000</option>
-
+ 
             <option value="2100000">£2,100,000</option>
             <option value="2200000">£2,200,000</option>
             <option value="2300000">£2,300,000</option>
@@ -524,7 +497,7 @@ const FindProperty = () => {
             <option value="2500000">£2,500,000</option>
             <option value="2750000">£2,750,000</option>
             <option value="3000000">£3,000,000</option>
-
+ 
             <option value="3250000">£3,250,000</option>
             <option value="3500000">£3,500,000</option>
             <option value="3750000">£3,750,000</option>
@@ -543,12 +516,12 @@ const FindProperty = () => {
             <option value="9000000">£9,000,000</option>
             <option value="9500000">£9,500,000</option>
             <option value="10000000">£10,000,000</option>
-
+ 
             <option value="12500000">£12,500,000</option>
             <option value="15000000">£15,000,000</option>
-
+ 
         </select>
-
+ 
         <select hidden name="sourceBedBath" id="sourceBedBath" >
             <option value="0">No Min Max</option>
             <option value="1">1</option>
@@ -562,11 +535,11 @@ const FindProperty = () => {
             <option value="9">9</option>
             <option value="999999999">10+</option>
         </select>
-
+ 
         {/* End of: Selects to be hidden and be used to refresh / rest the dorpdowns visible in screen */}
         </div>
 </>        
     );
 }
-
+ 
 export default FindProperty;
