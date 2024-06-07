@@ -14,6 +14,11 @@
       "id": "377a",
       "FirstName": "Sally",
       "SurName": "Smith"
+    },
+    {
+      "id": "baa9",
+      "FirstName": "Storm",
+      "SurName": "Evans"
     }
   ],
   "Sellers": [
@@ -40,6 +45,11 @@
       "FirstName": "Bishnu",
       "SurName": "Scotland",
       "id": "f182"
+    },
+    {
+      "id": "cf90",
+      "FirstName": "Chris",
+      "SurName": "Evans"
     }
   ],
   "Properties": [
@@ -71,7 +81,6 @@
       "Bedrooms": "7",
       "Bathrooms": "6",
       "Garden": "Yes",
-
       "SaleStatus": "SOLD",
       "id": "72f8"
     },
@@ -98,7 +107,7 @@
     {
       "id": "8197",
       "ImageUrl": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2024/01/minecraft-house-cherry.jpg",
-      "Address": "Cherry Biome, Minecraft",
+      "Address": "Cherry House, Minecraft",
       "Price": "64",
       "Bedrooms": "2",
       "Bathrooms": "0",
@@ -108,11 +117,21 @@
     {
       "id": "c2da",
       "ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Belton_House_South_Elevation.jpg",
-      "Address": "gggg",
-      "Price": "06",
-      "Bedrooms": 1,
+      "Address": "Our house, In the middle of Our Street",
+      "Price": "85500",
+      "Bedrooms": "2",
       "Bathrooms": 1,
       "Garden": "No",
+      "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "475e",
+      "ImageUrl": "https://www.thetopvillas.com/blog/wp-content/uploads/2020/11/rsz_157658394535972bbfb9774708d83ff0ef_2-2.jpg",
+      "Address": "Magic Drive, Orlando",
+      "Price": "16000000",
+      "Bedrooms": "7",
+      "Bathrooms": "10",
+      "Garden": "Yes",
       "SaleStatus": "FORSALE"
     }
   ],
