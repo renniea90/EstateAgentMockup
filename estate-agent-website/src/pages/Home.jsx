@@ -55,9 +55,6 @@ export default function HomePage() {
         SaleStatus,
       };
 
-      //code to be added for if new then set to forsale
-      setSaleStatus("FORSALE");
-
       fetch(
         "http://localhost:8000/Properties",
         {
@@ -77,7 +74,6 @@ export default function HomePage() {
           setBedrooms(0);
           setBathrooms(0);
           setGarden("");
-          setSaleStatus("");
           setSeller("");
           fetchData()
           handleCloseAdd()
@@ -103,7 +99,7 @@ export default function HomePage() {
             <h2>Have a property you want to sell?</h2>
             <h4>Click here to add your property details! </h4>
           </div>
-          <button variant="primary" onClick={handleShowAdd}>add</button>
+          <button variant="primary" className="amend-submit-btn" onClick={handleShowAdd}>Add</button>
         </div>
         <Modal show={showAdd} onHide={handleCloseAdd} backdrop="static" keyboard={false}>
           <Modal.Header closeButton>
@@ -111,7 +107,6 @@ export default function HomePage() {
           </Modal.Header>
           <Modal.Body>
             <form onSubmit={handleSubmit}>
-
               <div class="new-property-container">
                 <div class="existing-seller-title">
                   <label>Existing Sellers : </label>
@@ -169,8 +164,8 @@ export default function HomePage() {
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <button variant="secondary" onClick={handleCloseAdd}>Cancel</button>
-            <button variant="primary" type="submit" onClick={handleSubmit}>Add Property</button>
+            <button variant="secondary" className="filter-btn" onClick={handleCloseAdd}>Cancel</button>
+            <button variant="primary" className="amend-submit-btn" type="submit" onClick={handleSubmit}>Add Property</button>
           </Modal.Footer>
         </Modal>
       </div>

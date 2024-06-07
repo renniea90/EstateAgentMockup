@@ -398,6 +398,36 @@
       "Bathrooms": 0,
       "Garden": "",
       "SaleStatus": ""
+    },
+    {
+      "id": "9e6e",
+      "ImageUrl": "g",
+      "Address": "g",
+      "Price": 0,
+      "Bedrooms": 0,
+      "Bathrooms": 0,
+      "Garden": "",
+      "SaleStatus": ""
+    },
+    {
+      "id": "9b94",
+      "ImageUrl": "ttt",
+      "Address": "ttt",
+      "Price": 0,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "No",
+      "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "5217",
+      "ImageUrl": "t",
+      "Address": "tttt",
+      "Price": 0,
+      "Bedrooms": 0,
+      "Bathrooms": 0,
+      "Garden": "",
+      "SaleStatus": "FORSALE"
     }
   ],
   "Bookings": [
