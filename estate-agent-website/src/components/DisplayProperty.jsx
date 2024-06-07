@@ -2,7 +2,9 @@ import { useState, useEffect, useContext } from 'react';
 import PropertyCard from './PropertyCard';
 import { PropContext } from "../context/prop-context"
 
-export default function DisplayProperty({ id, apiData, fetchData }) {
+
+
+export default function DisplayProperty({ id, apiData, fetchData, handleClose, handleShow }) {
   //context for search filter
   const { gotFilter } = useContext(PropContext)
   const { priceMin } = useContext(PropContext)
@@ -13,6 +15,8 @@ export default function DisplayProperty({ id, apiData, fetchData }) {
   const { bathRoomsMax } = useContext(PropContext)
   const { hasGarden } = useContext(PropContext)
 
+  const [modalState, setModalState] = useState(false)
+
   const [ImageUrl, setImageUrl] = useState("");
   const [Address, setAddress] = useState("");
   const [Price, setPrice] = useState(0);
@@ -21,42 +25,19 @@ export default function DisplayProperty({ id, apiData, fetchData }) {
   const [Garden, setGarden] = useState("No");
   const [SaleStatus, setSaleStatus] = useState("FORSALE");
   const [Seller, setSeller] = useState("")
-  let [edit, setEdit] = useState([])
-  let [editAddress,setEditAddress] = useState("")
-  let [editPrice,setEditPrice] = useState("")
-  let [editBedrooms,setEditBedrooms] = useState("")
-  let [editBathrooms,setEditBathrooms] = useState("")
-  let [editGarden,setEditGarden] = useState("")
-  let [editImageUrl,setEditImageUrl] = useState("")
-  let [editSaleStatus,setEditSaleStatus] = useState("")
-  let [editID, setEditID] = useState("")
+  const [edit, setEdit] = useState([])
+  const [editAddress, setEditAddress] = useState("")
+  const [editPrice, setEditPrice] = useState("")
+  const [editBedrooms, setEditBedrooms] = useState("")
+  const [editBathrooms, setEditBathrooms] = useState("")
+  const [editGarden, setEditGarden] = useState("")
+  const [editImageUrl, setEditImageUrl] = useState("")
+  const [editSaleStatus, setEditSaleStatus] = useState("")
+  const [editID, setEditID] = useState("")
 
   useEffect(() => {
-    console.log(edit)
     setEditID(edit)
-    activateModal(edit)
-  }, [edit]);
-
-  const activateModal = () => {
-    console.log("Modal activated "+edit)
-    return (
-      console.log("return")
-    )
-  }
-
-  const sendUpdate = (e, Address, Price, Bedrooms, Bathrooms, Garden, ImageUrl, SaleStatus) => {
-    e.preventDefault()
-    console.log(editAddress)
-    fetch('http://localhost:8000/Properties/'+ editID, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ Address:editAddress, Price:editPrice, Bedrooms:editBedrooms, Bathrooms:editBathrooms, Garden:editGarden, ImageUrl:editImageUrl, SaleStatus:editSaleStatus}),
-    })
-      .then(fetchData)
-      .then(setEdit(""))
-      console.log("fetch complete")
-
-  }
+}, [edit]);
 
   // gotFilter will be true if user input is coming from the Find Property Component. If solid, filter the JSON and display only the result
   if (gotFilter) {
@@ -109,61 +90,19 @@ export default function DisplayProperty({ id, apiData, fetchData }) {
             fetchData={fetchData}
             edit={edit}
             setEdit={setEdit}
-            activateModal={activateModal}
+            setEditID={setEditID}
             setEditAddress={setEditAddress}
             setEditPrice={setEditPrice}
-            setEditBedrooms={setEditBedrooms}
             setEditBathrooms={setEditBathrooms}
+            setEditBedrooms={setEditBedrooms}
             setEditGarden={setEditGarden}
             setEditImageUrl={setEditImageUrl}
             setEditSaleStatus={setEditSaleStatus}
           />
-          
+
         ))
         }
-        {/* <dialog type="modal"> */} 
-        <div>
-          <form onSubmit={sendUpdate}>
-            <p>{edit}</p>
-            <div className="flex">
-              <p>Address:</p>
-              <input required type="text" defaultValue={editAddress} onChange={(e) => setEditAddress(e.target.value)}/>
-            </div>
-            <div className="flex">
-              <p>Price:</p>
-              <input required type="number" min={0} defaultValue={editPrice} onChange={(e) => setEditPrice(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Bedrooms:</p>
-              <input required type="number" min={0} defaultValue={editBedrooms} onChange={(e) => setEditBedrooms(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Bathrooms:</p>
-              <input required type="number" min={0} defaultValue={editBathrooms} onChange={(e) => setEditBathrooms(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Garden:</p>
-              <select required type="text" defaultValue={editGarden} onChange={(e) => setEditGarden(e.target.value)}>
-                <option>Yes</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div className="flex">
-              <p>Image URL:</p>
-              <input required type="text" defaultValue={editImageUrl} onChange={(e) => setEditImageUrl(e.target.value)} />
-            </div>
-            <div className="flex">
-              <p>Status:</p>
-              <select required defaultValue={editSaleStatus} onChange={(e) => setEditSaleStatus(e.target.value)}>
-                <option>FORSALE</option>
-                <option>WITHDRAWN</option>
-                <option>SOLD</option>
-              </select>
-            </div>
-            <button type="submit">Amend</button>
-          </form>
-        </div>
-      {/* </dialog> */}
+        
       </div>
     )
   };
