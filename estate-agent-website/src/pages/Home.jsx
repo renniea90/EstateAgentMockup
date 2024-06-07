@@ -68,9 +68,8 @@ export default function HomePage() {
           body: JSON.stringify(task),
         }
       ).then(
-        ()=> {
+        () => {
           alert("New Property Added");
-
           // reset text boxes
           setImageUrl("");
           setAddress("");
@@ -81,6 +80,7 @@ export default function HomePage() {
           setSaleStatus("");
           setSeller("");
           fetchData()
+          handleCloseAdd()
         }
       );
       //otherwise ask seller to register
@@ -111,95 +111,59 @@ export default function HomePage() {
           </Modal.Header>
           <Modal.Body>
             <form onSubmit={handleSubmit}>
-
               <label>Existing Sellers : </label>
               <select name="Sellers" onChange={(e) => setSeller(e.target.value)} value={Seller}>
                 <option value=""></option>
                 {Data.Sellers.map((item) => (
                   <option value={item.ID}>{item.FirstName + " " + item.SurName}</option>
-                ))}
+                )
+                )}
               </select>
               <br />
               <br />
               <br />
               <label htmlFor="fname"> Address :</label>
-              <input
-                id="fname"
-                type="text"
-                required
-                value={Address}
-                // event
-                onChange={(e) => setAddress(e.target.value)}
-              />
-              <br /> <br /> <br />
+              <input id="fname" type="text" required value={Address} onChange={(e) => setAddress(e.target.value)} />
+              <br />
+              <br />
+              <br />
               <label>
                 <span>Price :</span>{" "}
               </label>
-              <input
-                type="Number"
-                required
-                value={Price}
-                min={0}
-                // event is on change ,  target value is whats in the input box
-                onChange={(e) => setPrice(e.target.value)}
-              />
-              <br /> <br /> <br />
+              <input type="Number" required value={Price} min={0} onChange={(e) => setPrice(e.target.value)} />
+              <br />
+              <br />
+              <br />
               <label>Image URL : </label>
-              <input
-                type="text"
-                required
-                value={ImageUrl}
-                // event
-                onChange={(e) => setImageUrl(e.target.value)}
-              />
-              <br /> <br /> <br />
+              <input type="text" required value={ImageUrl} onChange={(e) => setImageUrl(e.target.value)} />
+              <br />
+              <br />
+              <br />
               <label>Bedrooms : </label>
-              <input
-                type="number"
-                required
-                value={Bedrooms}
-                min={0}
-                // event
-                onChange={(e) => setBedrooms(e.target.value)}
-              />
-              <br /> <br /> <br />
+              <input type="number" required value={Bedrooms} min={0} onChange={(e) => setBedrooms(e.target.value)} />
+              <br />
+              <br />
+              <br />
               <label>Bathrooms : </label>
-              <input
-                type="number"
-                required
-                value={Bathrooms}
-                min={0}
-                // event
-                onChange={(e) => setBathrooms(e.target.value)}
-              />
-              <br /> <br /> <br />
+              <input type="number" required value={Bathrooms} min={0} onChange={(e) => setBathrooms(e.target.value)} />
+              <br />
+              <br />
+              <br />
               <label>Garden : </label>
-              <select
-                value={Garden}
-                // event
-                onChange={(e) => setGarden(e.target.value)}
-              >
+              <select value={Garden} onChange={(e) => setGarden(e.target.value)}>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
               </select>
-              <br /> <br /> <br />
-              <button>Add Property</button>
-              <br /> <br /> <br />
+              <br />
+              <br />
+              <br />
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseAdd}>
-              Close
-            </Button>
-            <Button variant="primary">Understood</Button>
+            <button variant="secondary" onClick={handleCloseAdd}>Cancel</button>
+            <button variant="primary" type="submit" onClick={handleSubmit}>Add Property</button>
           </Modal.Footer>
         </Modal>
-
-
-
-        <div className="white-container">
-          {/* <AddProperty fetchData={fetchData} /> */}
-        </div>
       </div>
     </PropProvider>
 
