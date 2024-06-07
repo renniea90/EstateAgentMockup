@@ -2,7 +2,6 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { PiPottedPlantFill } from "react-icons/pi";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -63,11 +62,11 @@ export default function PropertyCard({ editID, setEditID, setEdit, id, ImageUrl,
           <p className="p-four property-data property-baths"><span><FaBath /></span> {bathrooms}</p>
           <p className="p-five property-data property-garden"> <span><PiPottedPlantFill /></span> {garden} </p>
         </div>
-        <div className="flex space-between">
-          <button className="appt-btn btn-left">
+        <div>
+          <button className="appt-btn float-left btn-left">
             <Link to='/bookings' className="appt-link">Book an appointment</Link>
           </button>
-          <button onClick={handleShow} className="edit-btn">Edit</button>
+          <button onClick={handleShow} className="edit-btn float-right">Edit</button>
           {/* <UpdateProperty onClick={EditProperty()} id={editID} Address={editAddress} Price={editPrice} Bedrooms={editBedrooms} Bathrooms={editBathrooms} Garden={editGarden} ImageUrl={editImageUrl} SaleStatus={editSaleStatus} handleClose={handleClose} handleShow={handleShow} /> */}
         </div>
       </div>

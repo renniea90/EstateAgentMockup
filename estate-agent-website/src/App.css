@@ -296,6 +296,14 @@
   text-decoration: none;
 }
 
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
 .appt-btn {
   font-size: 1vw;
 }
@@ -343,11 +351,10 @@ a:hover {
 }
 
 
-
-
-
-
-
+/* ADD PROPERTY  */
+.add-banner {
+  width: 60rem; 
+}
 
 
 /* DISPLAY PROPERTY & PROPERTY CARD */

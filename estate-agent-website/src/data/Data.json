@@ -225,7 +225,6 @@
       "FirstName": "i",
       "SurName": "i"
     }
-
   ],
   "Sellers": [
     {
@@ -315,9 +314,9 @@
       "Address": "10 Downing Street",
       "Price": "500000",
       "Bedrooms": "1",
-      "Bathrooms": "1",
+      "Bathrooms": "2",
       "Garden": "No",
-      "SaleStatus": "SOLD",
+      "SaleStatus": "FORSALE",
       "id": "4c9d"
     },
     {
@@ -343,10 +342,10 @@
     {
       "id": "b1b0",
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
-      "Address": "dennis",
-      "Price": "30",
-      "Bedrooms": "16",
-      "Bathrooms": "8",
+      "Address": "1 The Street",
+      "Price": "33000",
+      "Bedrooms": "2",
+      "Bathrooms": "1",
       "Garden": "Yes",
       "SaleStatus": "FORSALE"
     },
@@ -359,8 +358,17 @@
       "Bathrooms": 1,
       "Garden": "No",
       "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "c2da",
+      "ImageUrl": "6",
+      "Address": "gggg",
+      "Price": "06",
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "No",
+      "SaleStatus": "FORSALE"
     }
-  
   ],
   "Bookings": [
     {

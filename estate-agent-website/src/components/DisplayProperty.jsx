@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from 'react';
 import PropertyCard from './PropertyCard';
 import { PropContext } from "../context/prop-context"
-import Modal from 'react-bootstrap/Modal';
+
+
 
 export default function DisplayProperty({ id, apiData, fetchData, handleClose, handleShow }) {
   //context for search filter
@@ -101,6 +102,7 @@ export default function DisplayProperty({ id, apiData, fetchData, handleClose, h
 
         ))
         }
+        
       </div>
     )
   };
