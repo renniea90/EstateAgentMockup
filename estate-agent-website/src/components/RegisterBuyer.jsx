@@ -20,11 +20,15 @@ const RegisterBuyer = (props) => {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(newBuyer)
                 }
-            ).then(() => {
+            ).then((response) => response.json())
+            .then((dataa)=>         
+                document.getElementById("BuyerSuccess").innerHTML="Buyer " + FirstName + " " + SurName + " added successfully. ID is "  + dataa.id
+        )
+            .then(() => {
                 props.fetchBuyerData()
                 setFirstName('')
                 setSurName('')  
-            }) 
+            })
         }
     }
 
