@@ -121,7 +121,7 @@ export default function DisplayProperty({ id, apiData, fetchData }) {
           
         ))
         }
-        {/* <dialog type="modal"> */}
+        {/* <dialog type="modal"> */} 
         <div>
           <form onSubmit={sendUpdate}>
             <p>{edit}</p>

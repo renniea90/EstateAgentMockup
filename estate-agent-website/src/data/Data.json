@@ -40,6 +40,51 @@
       "FirstName": "Bishnu",
       "SurName": "Scotland",
       "id": "f182"
+    },
+    {
+      "id": "39e2",
+      "FirstName": "rhfyh",
+      "SurName": "thyhty"
+    },
+    {
+      "id": "41ce",
+      "FirstName": "tyjyj",
+      "SurName": "ukjtgukguk"
+    },
+    {
+      "id": "3654",
+      "FirstName": "thrtrt",
+      "SurName": "rtrtrty"
+    },
+    {
+      "id": "9548",
+      "FirstName": "tghdtghb",
+      "SurName": "thth"
+    },
+    {
+      "id": "1c02",
+      "FirstName": "uuuuuu",
+      "SurName": "uuuuuu"
+    },
+    {
+      "id": "594b",
+      "FirstName": "y",
+      "SurName": "y"
+    },
+    {
+      "id": "c5a9",
+      "FirstName": "p",
+      "SurName": "p"
+    },
+    {
+      "id": "65da",
+      "FirstName": "k",
+      "SurName": "k"
+    },
+    {
+      "id": "292d",
+      "FirstName": "j",
+      "SurName": "j"
     }
   ],
   "Properties": [
@@ -83,15 +128,59 @@
       "Garden": "Yes",
       "SaleStatus": "WITHDRAWN",
       "id": "648b"
+    },
+    {
+      "id": "b1b0",
+      "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
+      "Address": "dennis",
+      "Price": "30000000000",
+      "Bedrooms": "16",
+      "Bathrooms": "16",
+      "Garden": "Yes",
+      "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "8197",
+      "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
+      "Address": "jjjjjjjjjjj",
+      "Price": "07777",
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "No",
+      "SaleStatus": "FORSALE"
     }
   ],
   "Bookings": [
     {
+<<<<<<< HEAD
       "id": "e08c",
       "date": "2024-06-14",
       "time": "8-9am",
       "property": "Buckhingham Palace",
       "buyer": "John Renwick",
+=======
+      "id": "ab0b",
+      "date": "2024-06-05",
+      "time": "2to3",
+      "property": "10 Downing Street",
+      "buyer": "Suzy Brown",
+      "propertyid": ""
+    },
+    {
+      "id": "f3ea",
+      "date": "2024-06-12",
+      "time": "10to11",
+      "property": "dennis",
+      "buyer": "Andrew Rennie",
+      "propertyid": ""
+    },
+    {
+      "id": "f437",
+      "date": "2024-06-20",
+      "time": "11to12",
+      "property": "dennis",
+      "buyer": "Lorna Gordon Smith",
+>>>>>>> 4de815a194e4bcd06a152d3c692fabc57f6f2ce6
       "propertyid": ""
     },
     {
@@ -108,6 +197,14 @@
       "time": "12-1pm",
       "property": "Buckhingham Palace",
       "buyer": "Sally Smith",
+      "propertyid": ""
+    },
+    {
+      "id": "ac9a",
+      "date": "2024-06-06",
+      "time": "8to9",
+      "property": "dennis",
+      "buyer": "tet6 test6",
       "propertyid": ""
     }
   ]
