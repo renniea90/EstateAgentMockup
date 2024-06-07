@@ -133,6 +133,16 @@
       "Bathrooms": "10",
       "Garden": "Yes",
       "SaleStatus": "FORSALE"
+    },
+    {
+      "id": "e4ad",
+      "ImageUrl": "https://wallup.net/wp-content/uploads/2019/09/977995-mansion-house-architecture-luxury-building-design.jpg",
+      "Address": "Stormville",
+      "Price": "675000",
+      "Bedrooms": "5",
+      "Bathrooms": "3",
+      "Garden": "Yes",
+      "SaleStatus": "FORSALE"
     }
   ],
   "Bookings": [
