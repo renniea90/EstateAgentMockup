@@ -371,18 +371,8 @@
   display: none;
 }
 
-.WITHDRAWN .withdraw-btn {
+.WITHDRAWN .appt-btn, .SOLD .appt-btn {
   display: none;
-}
-
-.SOLD .withdraw-btn,
-.SOLD .resubmit-btn,
-.SOLD .appt-btn {
-  display: none;
-}
-
-.INVIS {
-  visibility: hidden;
 }
 
 .property-data {

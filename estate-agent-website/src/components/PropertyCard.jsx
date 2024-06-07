@@ -1,6 +1,7 @@
 import { FaBed, FaBath } from "react-icons/fa";
 import { PiPottedPlantFill } from "react-icons/pi";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function PropertyCard({ setEdit, setEditAddress, setEditPrice, setEditBedrooms, setEditBathrooms, setEditGarden,setEditImageUrl, setEditSaleStatus, id, ImageUrl, address, price, bedrooms, bathrooms, garden, salestatus, fetchData }) {
 
@@ -31,7 +32,10 @@ export default function PropertyCard({ setEdit, setEditAddress, setEditPrice, se
           <p className="p-five property-data property-garden"> <span><PiPottedPlantFill /></span> {garden} </p>
         </div>
         <div className="flex space-between">
-          <button className="appt-btn btn-left">Book an Appointment</button>
+          <button className="appt-btn btn-left">
+            <Link to='/bookings'>Book an appointment</Link>
+          </button>
+          
           <button onClick={() => EditProperty()}>Edit</button>
         </div>
       </div>
