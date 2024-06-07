@@ -14,6 +14,7 @@ export default function DisplayProperty({ id, apiData, fetchData, handleClose, h
   const { bathRoomsMin } = useContext(PropContext)
   const { bathRoomsMax } = useContext(PropContext)
   const { hasGarden } = useContext(PropContext)
+  const { exSold } = useContext(PropContext)
 
   const [modalState, setModalState] = useState(false)
 
@@ -69,6 +70,11 @@ export default function DisplayProperty({ id, apiData, fetchData, handleClose, h
     if (hasGarden === "Yes") {
       apiData = apiData.filter((Property) => Property.Garden === hasGarden)
     }
+    // If there is a Exclude Sold filter:
+    if (exSold) {
+      apiData = apiData.filter((Property) => Property.SaleStatus !== "SOLD")
+    }
+
   }
   if (apiData.length === 0) {
     return (
