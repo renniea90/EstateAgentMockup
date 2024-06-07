@@ -100,6 +100,214 @@
 
 
 /* FILTER PROPERTIES COMPONENT  */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0em 0em;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  align-items: center;
+  grid-template-areas:
+    "top-line"
+    "middle-line"
+    "button-line";
+  height: 70%;
+}
+
+.container {
+
+}
+
+.top-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5vw 0.5vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "price-filter bathrooms-filter";
+  grid-area: top-line;
+}
+
+.price-filter {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "price-title price-title price-title"
+    "price-min-filter price-to price-max-filter";
+  grid-area: price-filter;
+}
+
+.price-title {
+  grid-area: price-title;
+}
+
+.price-min-filter {
+  grid-area: price-min-filter;
+}
+
+.price-to {
+  grid-area: price-to;
+}
+
+.price-max-filter {
+  grid-area: price-max-filter;
+}
+
+.bathrooms-filter {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "bathrooms-title bathrooms-title bathrooms-title"
+    "bathrooms-min-filter bathrooms-to bathrooms-max-filter";
+  grid-area: bathrooms-filter;
+}
+
+.bathrooms-title {
+  grid-area: bathrooms-title;
+}
+
+.bathrooms-to {
+  grid-area: bathrooms-to;
+}
+
+.bathrooms-max-filter {
+  grid-area: bathrooms-max-filter;
+}
+
+.bathrooms-min-filter {
+  grid-area: bathrooms-min-filter;
+}
+
+.middle-line {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sold-filter bedrooms-filter garden-filter";
+  grid-area: middle-line;
+}
+
+.sold-filter {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0em 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sold-title"
+    "sold-checkbox";
+  grid-area: sold-filter;
+}
+
+.sold-title {
+  grid-area: sold-title;
+}
+
+.sold-checkbox {
+  grid-area: sold-checkbox;
+}
+
+.garden-filter {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "garden-title"
+    "garden-checkbox";
+  grid-area: garden-filter;
+}
+
+.garden-title {
+  grid-area: garden-title;
+}
+
+.garden-checkbox {
+  grid-area: garden-checkbox;
+}
+
+.bedrooms-filter {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "bedrooms-title bedrooms-title bedrooms-title"
+    "bedrooms-min-filter bedrooms-to bedrooms-max-filter";
+  grid-area: bedrooms-filter;
+}
+
+.bedrooms-title {
+  grid-area: bedrooms-title;
+}
+
+.bedrooms-to {
+  grid-area: bedrooms-to;
+}
+
+.bedrooms-min-filter {
+  grid-area: bedrooms-min-filter;
+}
+
+.bedrooms-max-filter {
+  grid-area: bedrooms-max-filter;
+}
+
+.button-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "reset-filters submit-filters";
+  grid-area: button-line;
+}
+
+.reset-filters {
+  grid-area: reset-filters;
+}
+
+.submit-filters {
+  grid-area: submit-filters;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .white-container {
   margin: 2vw 10vw;
   padding: 1vw;
@@ -135,73 +343,11 @@
   max-width: 20vw;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1.4fr 1.4fr;
-  grid-template-rows: auto auto 0.6fr;
-  grid-auto-columns: 1fr;
-  gap: 1em 3em;
-  grid-auto-flow: row;
-  justify-items: stretch;
-  align-items: center;
-  grid-template-areas:
-    "price bathrooms"
-    "bedrooms garden"
-    "reset submit";
-  height: 70%;
-}
-
-.price {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "price-heading price-heading price-heading"
-    "price-min price-to price-max";
-  grid-area: price;
-}
-
-.price-heading {
-  font-size: 1.5vw;
-  justify-self: center;
-  align-self: center;
-  grid-area: price-heading;
-}
-
-.price-max {
-  grid-area: price-max;
-}
-
-.price-min {
-  grid-area: price-min;
-}
-
 .price-to {
   align-self: center;
   font-size: 1.2vw;
   justify-self: center;
   grid-area: price-to;
-}
-
-.bathrooms {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "bathrooms-heading bathrooms-heading bathrooms-heading"
-    "bathrooms-min bathrooms-to bathrooms-max";
-  grid-area: bathrooms;
-}
-
-.bathrooms-heading {
-  font-size: 1.5vw;
-  justify-self: center;
-  align-self: center;
-  grid-area: bathrooms-heading;
 }
 
 .bathrooms-to {
@@ -211,77 +357,11 @@
   grid-area: bathrooms-to;
 }
 
-.bathrooms-min {
-  grid-area: bathrooms-min;
-}
-
-.bathrooms-max {
-  grid-area: bathrooms-max;
-}
-
-.bedrooms {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "bedrooms-heading bedrooms-heading bedrooms-heading"
-    "bedrooms-min bedrooms-to bedrooms-max";
-  grid-area: bedrooms;
-}
-
-.bedrooms-heading {
-  font-size: 1.5vw;
-  justify-self: center;
-  align-self: center;
-  grid-area: bedrooms-heading;
-}
-
 .bedrooms-to {
   font-size: 1.2vw;
   justify-self: center;
   align-self: center;
   grid-area: bedrooms-to;
-}
-
-.bedrooms-min {
-  grid-area: bedrooms-min;
-}
-
-.bedrooms-max {
-  grid-area: bedrooms-max;
-}
-
-.garden {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "garden-heading"
-    "checkbox";
-  grid-area: garden;
-}
-
-.garden-heading {
-  font-size: 1.5vw;
-  justify-self: center;
-  grid-area: garden-heading;
-}
-
-.checkbox {
-  justify-self: center;
-  align-self: center;
-  grid-area: checkbox;
-}
-
-.reset {
-  justify-self: center;
-  align-self: center;
-  grid-area: reset;
 }
 
 .amend-submit-btn,
@@ -351,6 +431,11 @@ a:hover {
   align-self: center;
   grid-area: submit;
 }
+
+
+
+
+
 
 
 /* ADD PROPERTY  */
