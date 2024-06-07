@@ -46,7 +46,7 @@
     {
       "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
       "Address": "Buckhingham Palace",
-      "Price": 120000,
+      "Price": 120000000,
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
@@ -57,11 +57,11 @@
     {
       "ImageUrl": "https://www.idesignarch.com/wp-content/uploads/Luxury-Custom-Waterfront-Beach-House-Morehead-City-North-Carolina_1.jpg",
       "Address": "10 Downing Street",
-      "Price": "500000",
-      "Bedrooms": "1",
-      "Bathrooms": "2",
-      "Garden": "No",
-      "SaleStatus": "FORSALE",
+      "Price": 500000000,
+      "Bedrooms": 10,
+      "Bathrooms": 5,
+      "Garden": "Yes",
+      "SaleStatus": "WITHDRAWN",
       "id": "4c9d"
     },
     {
@@ -71,6 +71,7 @@
       "Bedrooms": "7",
       "Bathrooms": "6",
       "Garden": "Yes",
+
       "SaleStatus": "SOLD",
       "id": "72f8"
     },

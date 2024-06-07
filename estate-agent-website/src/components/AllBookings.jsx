@@ -25,6 +25,8 @@ function AllBookings({ fetchData }) {
       .then((data) => setBooking(data));
   }, []);
 
+  console.log("Booking date", booking.date)
+
   return (
     <div>
     <table>
@@ -58,24 +60,25 @@ function AllBookings({ fetchData }) {
             
               <td className="td-border">{booking.buyer}</td>
               <td className="td-border">{booking.property}</td>
-              {/* <td className="td-border" >{booking.date}</td> */}
+              <td className="td-border" >{new Date(booking.date).toLocaleDateString()}</td>
 
-              <td className="td-border" >
+     
                 
-              {(() => {
-                    const dateObj = new Date(booking.date);
-                    const day = dateObj.getDate();
-                    const month = dateObj.getMonth() + 1; // Months are zero-indexed
-                    const year = dateObj.getFullYear();
+              {/* {(() => {
+                    // const dateObj = new Date(booking.date);
+                    // const day = dateObj.getDate();
+                    // const month = dateObj.getMonth() + 1; // Months are zero-indexed
+                    // const year = dateObj.getFullYear();
 
-                    // Add leading zeros if necessary
-                    const formattedDate = `${day < 10 ? "0" : ""}${day}/${
-                    month < 10 ? "0" : ""
-                    }${month}/${year}`;
+                    // // Add leading zeros if necessary
+                    // const formattedDate = `${day < 10 ? "0" : ""}${day}/${
+                    // month < 10 ? "0" : ""
+                    // }${month}/${year}`;
+                    // alert ("display format" + formattedDate )
 
-                    return formattedDate;
-                 })()}
-</td>
+                    // return formattedDate;
+                 })()} */}
+{/* </td> */}
               
               
               <td className="td-border">{booking.time}</td>
