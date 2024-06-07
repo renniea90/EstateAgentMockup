@@ -34,8 +34,10 @@ const formattedDate = yyyy + '-' + mm + '-' + dd;
       booking.date === date &&
       booking.time === time &&
       booking.property === property
+      
     );
   });
+
 
   const handleSubmit = (e) => {
     // tells the event if the event doesnt get handled dont use the default action as I want to do something else
@@ -45,10 +47,14 @@ const formattedDate = yyyy + '-' + mm + '-' + dd;
   
     if (property === "" || buyer === "" ) {
       alert("Please select your name & a property to book a viewing for");
+
     } else {
-      if (existingBooking) {
+      if (existingBooking ) {
+   
+        
         alert("Please select another time slot as this is booked");
       } else {
+console.log("date in add", date)
         const task = {
           date,
           time,
@@ -67,7 +73,7 @@ const formattedDate = yyyy + '-' + mm + '-' + dd;
           alert("New Viewing Booked");
 
           // reset text boxes
-          setDate();
+          setDate(formattedDate);
           setTime("");
           setProperty("");
           setPropertyID("");

@@ -2,44 +2,43 @@
   "Buyers": [
     {
       "id": "ba7e",
-      "FirstName": "Andrew",
-      "SurName": "Rennie"
+      "FirstName": "John",
+      "SurName": "Renwick"
     },
     {
       "id": "cbf1",
-      "FirstName": "Praveen",
-      "SurName": "Karnam"
+      "FirstName": "Prabhakar",
+      "SurName": "Raj"
     },
     {
       "id": "377a",
-      "FirstName": "Suzy",
-      "SurName": "Brown"
+      "FirstName": "Sally",
+      "SurName": "Smith"
     }
-
   ],
   "Sellers": [
     {
       "ID": 1,
-      "FirstName": "Praveen",
-      "SurName": "Karnam",
+      "FirstName": "Peter",
+      "SurName": "Parker",
       "id": "f95d"
     },
     {
       "ID": 2,
-      "FirstName": "Andrew",
-      "SurName": "Rennie",
+      "FirstName": "Joe",
+      "SurName": "Bloggs",
       "id": "27c4"
     },
     {
       "ID": 3,
-      "FirstName": "Lorna",
+      "FirstName": "Saritha",
       "SurName": "Smith",
       "id": "e8b7"
     },
     {
       "ID": 4,
-      "FirstName": "Suzy",
-      "SurName": "Brown",
+      "FirstName": "Bishnu",
+      "SurName": "Scotland",
       "id": "f182"
     }
   ],
@@ -47,7 +46,7 @@
     {
       "ImageUrl": "https://th.bing.com/th/id/OIP.KN-6-mRpSjbWxjQkOKFnHAHaEl?rs=1&pid=ImgDetMain",
       "Address": "Buckhingham Palace",
-      "Price": 120000,
+      "Price": 120000000,
       "Bedrooms": 4,
       "Bathrooms": 2,
       "Garden": "Yes",
@@ -60,7 +59,7 @@
       "Address": "10 Downing Street",
       "Price": 500000000,
       "Bedrooms": 10,
-      "Bathrooms": 20,
+      "Bathrooms": 5,
       "Garden": "Yes",
       "SaleStatus": "WITHDRAWN",
       "id": "4c9d"
@@ -68,9 +67,9 @@
     {
       "ImageUrl": "https://i.pinimg.com/originals/7e/82/ae/7e82aef7d0cc2f754488e287f687aace.jpg",
       "Address": "25 Gresham Street, London",
-      "Price": 250000,
+      "Price": 2500000,
       "Bedrooms": 1,
-      "Bathrooms": 1,
+      "Bathrooms": 2,
       "Garden": "No",
       "SaleStatus": "SOLD",
       "id": "72f8"
@@ -85,23 +84,30 @@
       "SaleStatus": "WITHDRAWN",
       "id": "648b"
     }
-  
   ],
   "Bookings": [
     {
-      "id": "c3bd",
-      "date": "2024-06-13",
-      "time": "11am-12pm",
+      "id": "e08c",
+      "date": "2024-06-14",
+      "time": "8-9am",
       "property": "Buckhingham Palace",
-      "buyer": "Friday2 surfriday",
+      "buyer": "John Renwick",
       "propertyid": ""
     },
     {
-      "id": "5ea7",
-      "date": "2024-06-11",
-      "time": "11am-12pm",
+      "id": "ebeb",
+      "date": "2024-06-07",
+      "time": "3-4pm",
       "property": "Buckhingham Palace",
-      "buyer": "Friday2 surfriday",
+      "buyer": "Prabhakar Raj",
+      "propertyid": ""
+    },
+    {
+      "id": "580c",
+      "date": "2024-06-07",
+      "time": "12-1pm",
+      "property": "Buckhingham Palace",
+      "buyer": "Sally Smith",
       "propertyid": ""
     }
   ]
