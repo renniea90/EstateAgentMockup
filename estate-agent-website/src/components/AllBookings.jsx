@@ -27,44 +27,70 @@ function AllBookings({ fetchData }) {
 
   return (
     <div>
-      <table>
-        <thead>
-          <div className="">
-            <p>Properties For Sale: </p>
-            <select name="Propertys" onChange={(e) => setProperty(e.target.value)}>
-              <option value="">All Bookings</option>
-              {forsale.map((item) => (
-                <option value={item.Address}>{item.Address}</option>
-              ))}
-            </select>
-          </div>
-          <tr>
-            {/* <th>ID</th> */}
-            <th className="th-border">Buyer</th>
-            <th>Property Address</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Cancel </th>
-          </tr>
-        </thead>
-        <tbody>
-          {booking
-            .filter((booking) => !property || booking.property === property)
-            .map((booking) => (
-              <tr className="hover" key={booking.id}>
-                {/* <td>{booking.id}</td> */}
-                <td className="td-border">{booking.buyer}</td>
-                <td className="td-border">{booking.property}</td>
-                <td className="td-border">{booking.date}</td>
-                <td className="td-border">{booking.time}</td>
-                <td className="td-border">
-                  <button onClick={() => CancelBooking(booking.id, { fetchData })}>Cancel Booking</button>
-                </td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <thead>
+      <div className="property-option">
+        <p>Select Property : </p>
+
+                <select name="Propertys" onChange={(e) => setProperty(e.target.value)}>
+                <option value="">All Bookings</option>
+                {forsale.map((item) => (
+                    <option value={item.Address}>{item.Address}</option>
+                ))}
+                </select>
+    
+      </div>
+        <tr>
+          {/* <th>ID</th> */}
+          <th className="th-border">Buyer</th>
+          <th>Property Address</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Cancel </th>
+        </tr>
+      </thead>
+      <tbody>
+        {booking
+          .filter((booking) => !property || booking.property === property)
+          .map((booking) => (
+            <tr className="hover" key={booking.id}>
+              {/* <td>{booking.id}</td> */}
+            
+              <td className="td-border">{booking.buyer}</td>
+              <td className="td-border">{booking.property}</td>
+              {/* <td className="td-border" >{booking.date}</td> */}
+
+              <td className="td-border" >
+                
+              {(() => {
+                    const dateObj = new Date(booking.date);
+                    const day = dateObj.getDate();
+                    const month = dateObj.getMonth() + 1; // Months are zero-indexed
+                    const year = dateObj.getFullYear();
+
+                    // Add leading zeros if necessary
+                    const formattedDate = `${day < 10 ? "0" : ""}${day}/${
+                    month < 10 ? "0" : ""
+                    }${month}/${year}`;
+
+                    return formattedDate;
+                 })()}
+</td>
+              
+              
+              <td className="td-border">{booking.time}</td>
+              <td className="td-border">
+                <button
+                  onClick={() => CancelBooking(booking.id, { fetchData })}
+                >
+                  Cancel Booking
+                </button>
+              </td>
+            </tr>
+          ))}
+      </tbody>
+    </table>
+</div>
   );
 }
 
