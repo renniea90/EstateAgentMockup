@@ -39,6 +39,13 @@
     border-bottom: #565264 1px solid;
   }
   
+  .booking .property-option {
+ 
+    background-color: #A6808C;
+    color: #F7F7F8;
+    border-bottom: #565264 10px solid;
+  }
+
   .booking .th-border {
     border-left: #565264 1px solid;
     border-right: #565264 1px solid;
@@ -75,9 +82,10 @@
   }
   
   .booking .name-input {
-    margin: 10px;
+    margin: 20px;
   }
   
   .booking input {
     max-width: 20vw;
+    min-height: 1.3vw;
   }

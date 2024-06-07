@@ -225,6 +225,7 @@
       "FirstName": "i",
       "SurName": "i"
     }
+
   ],
   "Sellers": [
     {
@@ -359,6 +360,7 @@
       "Garden": "No",
       "SaleStatus": "FORSALE"
     }
+  
   ],
   "Bookings": [
     {
@@ -386,10 +388,11 @@
       "propertyid": ""
     },
     {
-      "id": "8b0b",
-      "time": "3to4",
-      "property": "Edinburgh Castle",
-      "buyer": "Lorna Gordon Smith",
+      "id": "5ea7",
+      "date": "2024-06-11",
+      "time": "11am-12pm",
+      "property": "Buckhingham Palace",
+      "buyer": "Friday2 surfriday",
       "propertyid": ""
     },
     {
