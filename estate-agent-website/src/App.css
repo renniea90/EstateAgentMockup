@@ -284,7 +284,9 @@
   grid-area: reset;
 }
 
-.amend-submit-btn, .appt-btn, .submit-filter-btn {
+.amend-submit-btn,
+.appt-btn,
+.submit-filter-btn {
   background-color: #A6808C;
   border-radius: 5px;
   border: 1px solid #565264;
@@ -353,7 +355,83 @@ a:hover {
 
 /* ADD PROPERTY  */
 .add-banner {
-  width: 60rem; 
+  width: 60rem;
+}
+
+.new-property-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0.5em 0.5em;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  align-items: center;
+  grid-template-areas:
+    "existing-seller-title existing-seller-input"
+    "new-address-title new-address-input"
+    "new-price-title new-price-input"
+    "new-bedrooms-title new-bedrooms-input"
+    "new-bathrooms-title new-bathrooms-input"
+    "new-garden-title new-garden-input"
+    "new-ImagUrl-title new-image-input";
+  height: 70%;
+}
+
+.existing-seller-title {
+  grid-area: existing-seller-title;
+}
+
+.new-address-title {
+  grid-area: new-address-title;
+}
+
+.new-price-title {
+  grid-area: new-price-title;
+}
+
+.new-bedrooms-title {
+  grid-area: new-bedrooms-title;
+}
+
+.new-bathrooms-title {
+  grid-area: new-bathrooms-title;
+}
+
+.new-garden-title {
+  grid-area: new-garden-title;
+}
+
+.new-ImagUrl-title {
+  grid-area: new-ImagUrl-title;
+}
+
+.existing-seller-input {
+  grid-area: existing-seller-input;
+}
+
+.new-address-input {
+  grid-area: new-address-input;
+}
+
+.new-price-input {
+  grid-area: new-price-input;
+}
+
+.new-bedrooms-input {
+  grid-area: new-bedrooms-input;
+}
+
+.new-bathrooms-input {
+  grid-area: new-bathrooms-input;
+}
+
+.new-garden-input {
+  grid-area: new-garden-input;
+}
+
+.new-image-input {
+  grid-area: new-image-input;
 }
 
 

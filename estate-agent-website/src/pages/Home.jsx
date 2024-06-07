@@ -111,52 +111,61 @@ export default function HomePage() {
           </Modal.Header>
           <Modal.Body>
             <form onSubmit={handleSubmit}>
-              <label>Existing Sellers : </label>
-              <select name="Sellers" onChange={(e) => setSeller(e.target.value)} value={Seller}>
-                <option value=""></option>
-                {Data.Sellers.map((item) => (
-                  <option value={item.ID}>{item.FirstName + " " + item.SurName}</option>
-                )
-                )}
-              </select>
-              <br />
-              <br />
-              <br />
-              <label htmlFor="fname"> Address :</label>
-              <input id="fname" type="text" required value={Address} onChange={(e) => setAddress(e.target.value)} />
-              <br />
-              <br />
-              <br />
-              <label>
-                <span>Price :</span>{" "}
-              </label>
-              <input type="Number" required value={Price} min={0} onChange={(e) => setPrice(e.target.value)} />
-              <br />
-              <br />
-              <br />
-              <label>Image URL : </label>
-              <input type="text" required value={ImageUrl} onChange={(e) => setImageUrl(e.target.value)} />
-              <br />
-              <br />
-              <br />
-              <label>Bedrooms : </label>
-              <input type="number" required value={Bedrooms} min={0} onChange={(e) => setBedrooms(e.target.value)} />
-              <br />
-              <br />
-              <br />
-              <label>Bathrooms : </label>
-              <input type="number" required value={Bathrooms} min={0} onChange={(e) => setBathrooms(e.target.value)} />
-              <br />
-              <br />
-              <br />
-              <label>Garden : </label>
-              <select value={Garden} onChange={(e) => setGarden(e.target.value)}>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-              <br />
-              <br />
-              <br />
+
+              <div class="new-property-container">
+                <div class="existing-seller-title">
+                  <label>Existing Sellers : </label>
+                </div>
+                <div class="new-address-title">
+                  <label htmlFor="fname"> Address :</label>
+                </div>
+                <div class="new-price-title">
+                  <label><span>Price :</span>{" "}</label>
+                </div>
+                <div class="new-bedrooms-title">
+                  <label>Bedrooms : </label>
+                </div>
+                <div class="new-bathrooms-title">
+                  <label>Bathrooms : </label>
+                </div>
+                <div class="new-garden-title">
+                  <label>Garden : </label>
+                </div>
+                <div class="new-ImagUrl-title">
+                  <label>Image URL : </label>
+                </div>
+                <div class="existing-seller-input">
+                  <select name="Sellers" onChange={(e) => setSeller(e.target.value)} value={Seller}>
+                    <option value=""></option>
+                    {Data.Sellers.map((item) => (
+                      <option value={item.ID}>{item.FirstName + " " + item.SurName}</option>
+                    )
+                    )}
+                  </select>
+                </div>
+                <div class="new-address-input">
+                  <input id="fname" type="text" required value={Address} onChange={(e) => setAddress(e.target.value)} />
+                </div>
+                <div class="new-price-input">
+                  <input type="Number" required value={Price} min={0} onChange={(e) => setPrice(e.target.value)} />
+                </div>
+                <div class="new-bedrooms-input">
+                  <input type="number" required value={Bedrooms} min={0} onChange={(e) => setBedrooms(e.target.value)} />
+                </div>
+                <div class="new-bathrooms-input">
+                  <input type="number" required value={Bathrooms} min={0} onChange={(e) => setBathrooms(e.target.value)} />
+                </div>
+                <div class="new-garden-input">
+                  <select value={Garden} onChange={(e) => setGarden(e.target.value)}>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="new-image-input">
+                  <input type="text" required value={ImageUrl} onChange={(e) => setImageUrl(e.target.value)} />
+                </div>
+              </div>
+
             </form>
           </Modal.Body>
           <Modal.Footer>
